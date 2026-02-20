@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 380">
+<defs>
+  <linearGradient id="hs5" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#1c1c2c"/><stop offset="50%" stop-color="#0d0d1a"/><stop offset="100%" stop-color="#161622"/>
+  </linearGradient>
+  <linearGradient id="rgb5" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#00d4ff"><animate attributeName="stop-color" values="#00d4ff;#aa00ff;#ff6600;#00d4ff" dur="3.5s" repeatCount="indefinite"/></stop>
+    <stop offset="100%" stop-color="#aa00ff"><animate attributeName="stop-color" values="#aa00ff;#ff6600;#00d4ff;#aa00ff" dur="3.5s" repeatCount="indefinite"/></stop>
+  </linearGradient>
+  <filter id="g5"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <path id="bl5" d="M0,-42 C11,-35 16,-21 9,-9 C4,-2 0,0 -4,-2 C-9,-9 -16,-21 -11,-35Z"/>
+</defs>
+<!-- Left tower heatsink -->
+<g fill="url(#hs5)" stroke="#181828" stroke-width="0.6">
+  <rect x="28" y="55" width="110" height="7" rx="1.5"/>
+  <rect x="28" y="66" width="110" height="7" rx="1.5"/>
+  <rect x="28" y="77" width="110" height="7" rx="1.5"/>
+  <rect x="28" y="88" width="110" height="7" rx="1.5"/>
+  <rect x="28" y="99" width="110" height="7" rx="1.5"/>
+  <rect x="28" y="110" width="110" height="7" rx="1.5"/>
+  <rect x="28" y="121" width="110" height="7" rx="1.5"/>
+  <rect x="28" y="132" width="110" height="7" rx="1.5"/>
+  <rect x="28" y="143" width="110" height="7" rx="1.5"/>
+  <rect x="28" y="154" width="110" height="7" rx="1.5"/>
+  <rect x="28" y="165" width="110" height="7" rx="1.5"/>
+  <rect x="28" y="176" width="110" height="7" rx="1.5"/>
+  <rect x="28" y="187" width="110" height="7" rx="1.5"/>
+  <rect x="28" y="198" width="110" height="7" rx="1.5"/>
+  <rect x="28" y="209" width="110" height="7" rx="1.5"/>
+  <rect x="28" y="220" width="110" height="7" rx="1.5"/>
+  <rect x="28" y="231" width="110" height="7" rx="1.5"/>
+  <rect x="28" y="242" width="110" height="7" rx="1.5"/>
+  <rect x="28" y="253" width="110" height="7" rx="1.5"/>
+  <rect x="28" y="264" width="110" height="7" rx="1.5"/>
+  <rect x="28" y="275" width="110" height="7" rx="1.5"/>
+</g>
+<!-- Right tower heatsink -->
+<g fill="url(#hs5)" stroke="#181828" stroke-width="0.6">
+  <rect x="222" y="55" width="110" height="7" rx="1.5"/>
+  <rect x="222" y="66" width="110" height="7" rx="1.5"/>
+  <rect x="222" y="77" width="110" height="7" rx="1.5"/>
+  <rect x="222" y="88" width="110" height="7" rx="1.5"/>
+  <rect x="222" y="99" width="110" height="7" rx="1.5"/>
+  <rect x="222" y="110" width="110" height="7" rx="1.5"/>
+  <rect x="222" y="121" width="110" height="7" rx="1.5"/>
+  <rect x="222" y="132" width="110" height="7" rx="1.5"/>
+  <rect x="222" y="143" width="110" height="7" rx="1.5"/>
+  <rect x="222" y="154" width="110" height="7" rx="1.5"/>
+  <rect x="222" y="165" width="110" height="7" rx="1.5"/>
+  <rect x="222" y="176" width="110" height="7" rx="1.5"/>
+  <rect x="222" y="187" width="110" height="7" rx="1.5"/>
+  <rect x="222" y="198" width="110" height="7" rx="1.5"/>
+  <rect x="222" y="209" width="110" height="7" rx="1.5"/>
+  <rect x="222" y="220" width="110" height="7" rx="1.5"/>
+  <rect x="222" y="231" width="110" height="7" rx="1.5"/>
+  <rect x="222" y="242" width="110" height="7" rx="1.5"/>
+  <rect x="222" y="253" width="110" height="7" rx="1.5"/>
+  <rect x="222" y="264" width="110" height="7" rx="1.5"/>
+  <rect x="222" y="275" width="110" height="7" rx="1.5"/>
+</g>
+<!-- RGB strip on both towers -->
+<rect x="28" y="52" width="110" height="4" rx="1" fill="url(#rgb5)" opacity="0.75">
+  <animate attributeName="opacity" values="0.55;0.9;0.55" dur="2.5s" repeatCount="indefinite"/>
+</rect>
+<rect x="222" y="52" width="110" height="4" rx="1" fill="url(#rgb5)" opacity="0.75">
+  <animate attributeName="opacity" values="0.9;0.55;0.9" dur="2.5s" repeatCount="indefinite"/>
+</rect>
+<!-- Heat pipes across both towers -->
+<path d="M138,170 C160,168 180,168 222,170" fill="none" stroke="#5a4020" stroke-width="6" stroke-linecap="round"/>
+<path d="M138,185 C160,183 180,183 222,185" fill="none" stroke="#5a4020" stroke-width="6" stroke-linecap="round"/>
+<path d="M138,200 C160,198 180,198 222,200" fill="none" stroke="#5a4020" stroke-width="6" stroke-linecap="round"/>
+<path d="M138,215 C160,213 180,213 222,215" fill="none" stroke="#5a4020" stroke-width="6" stroke-linecap="round"/>
+<!-- Base plate -->
+<rect x="100" y="295" width="160" height="22" rx="5" fill="#141420" stroke="#252535" stroke-width="1.5"/>
+<rect x="104" y="297" width="152" height="18" rx="4" fill="#0e0e1c" stroke="#1e1e2c" stroke-width="1"/>
+<!-- Center fan 120mm between towers -->
+<g transform="translate(180,175)">
+  <rect x="-46" y="-46" width="92" height="92" rx="10" fill="#0a0a14" stroke="#1d1d2c" stroke-width="1.8"/>
+  <circle cx="-37" cy="-37" r="5" fill="#0d0d1c" stroke="#252535" stroke-width="1.2"/>
+  <circle cx="-37" cy="-37" r="2" fill="#080810"/>
+  <circle cx="37" cy="-37" r="5" fill="#0d0d1c" stroke="#252535" stroke-width="1.2"/>
+  <circle cx="37" cy="-37" r="2" fill="#080810"/>
+  <circle cx="-37" cy="37" r="5" fill="#0d0d1c" stroke="#252535" stroke-width="1.2"/>
+  <circle cx="-37" cy="37" r="2" fill="#080810"/>
+  <circle cx="37" cy="37" r="5" fill="#0d0d1c" stroke="#252535" stroke-width="1.2"/>
+  <circle cx="37" cy="37" r="2" fill="#080810"/>
+  <circle r="42" fill="none" stroke="#191926" stroke-width="2.2"/>
+  <g filter="url(#g5)">
+    <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="1.4s" repeatCount="indefinite"/>
+    <use href="#bl5" fill="#1c1c2a" transform="rotate(0)"/><use href="#bl5" fill="#1c1c2a" transform="rotate(45)"/>
+    <use href="#bl5" fill="#1c1c2a" transform="rotate(90)"/><use href="#bl5" fill="#1c1c2a" transform="rotate(135)"/>
+    <use href="#bl5" fill="#1c1c2a" transform="rotate(180)"/><use href="#bl5" fill="#1c1c2a" transform="rotate(225)"/>
+    <use href="#bl5" fill="#1c1c2a" transform="rotate(270)"/><use href="#bl5" fill="#1c1c2a" transform="rotate(315)"/>
+  </g>
+  <circle r="12" fill="#0a0a14" stroke="#2a2a3a" stroke-width="1.5"/>
+  <circle r="7" fill="#070710" stroke="#323242" stroke-width="1"/>
+  <circle r="3" fill="#161625"/>
+</g>
+</svg>

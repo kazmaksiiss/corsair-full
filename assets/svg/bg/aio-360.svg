@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 240">
+<defs>
+  <linearGradient id="m2" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#252535"/><stop offset="50%" stop-color="#0e0e18"/><stop offset="100%" stop-color="#181825"/>
+  </linearGradient>
+  <linearGradient id="rgb2" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#00d4ff"><animate attributeName="stop-color" values="#00d4ff;#ff00aa;#00ff66;#00d4ff" dur="4s" repeatCount="indefinite"/></stop>
+    <stop offset="100%" stop-color="#ff00aa"><animate attributeName="stop-color" values="#ff00aa;#00ff66;#00d4ff;#ff00aa" dur="4s" repeatCount="indefinite"/></stop>
+  </linearGradient>
+  <filter id="g2"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="rg2"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <path id="bl2" d="M0,-38 C10,-32 15,-19 8,-8 C4,-2 0,0 -4,-2 C-9,-8 -15,-19 -10,-32 Z"/>
+</defs>
+<!-- Radiator 360mm -->
+<rect x="60" y="20" width="440" height="170" rx="9" fill="url(#m2)" stroke="#222232" stroke-width="1.5"/>
+<rect x="60" y="20" width="440" height="10" rx="5" fill="#181825" stroke="#2d2d3d" stroke-width="1"/>
+<rect x="60" y="180" width="440" height="10" rx="5" fill="#181825" stroke="#2d2d3d" stroke-width="1"/>
+<!-- Dense fins -->
+<g stroke="#161622" stroke-width="0.55">
+  <line x1="70" y1="30" x2="70" y2="180"/><line x1="76" y1="30" x2="76" y2="180"/><line x1="82" y1="30" x2="82" y2="180"/>
+  <line x1="88" y1="30" x2="88" y2="180"/><line x1="94" y1="30" x2="94" y2="180"/><line x1="100" y1="30" x2="100" y2="180"/>
+  <line x1="106" y1="30" x2="106" y2="180"/><line x1="112" y1="30" x2="112" y2="180"/><line x1="118" y1="30" x2="118" y2="180"/>
+  <line x1="124" y1="30" x2="124" y2="180"/><line x1="130" y1="30" x2="130" y2="180"/><line x1="136" y1="30" x2="136" y2="180"/>
+  <line x1="142" y1="30" x2="142" y2="180"/><line x1="148" y1="30" x2="148" y2="180"/><line x1="154" y1="30" x2="154" y2="180"/>
+  <line x1="160" y1="30" x2="160" y2="180"/><line x1="166" y1="30" x2="166" y2="180"/><line x1="172" y1="30" x2="172" y2="180"/>
+  <line x1="178" y1="30" x2="178" y2="180"/><line x1="184" y1="30" x2="184" y2="180"/><line x1="190" y1="30" x2="190" y2="180"/>
+  <line x1="196" y1="30" x2="196" y2="180"/><line x1="202" y1="30" x2="202" y2="180"/><line x1="208" y1="30" x2="208" y2="180"/>
+  <line x1="214" y1="30" x2="214" y2="180"/><line x1="220" y1="30" x2="220" y2="180"/><line x1="226" y1="30" x2="226" y2="180"/>
+  <line x1="232" y1="30" x2="232" y2="180"/><line x1="238" y1="30" x2="238" y2="180"/><line x1="244" y1="30" x2="244" y2="180"/>
+  <line x1="250" y1="30" x2="250" y2="180"/><line x1="256" y1="30" x2="256" y2="180"/><line x1="262" y1="30" x2="262" y2="180"/>
+  <line x1="268" y1="30" x2="268" y2="180"/><line x1="274" y1="30" x2="274" y2="180"/><line x1="280" y1="30" x2="280" y2="180"/>
+  <line x1="286" y1="30" x2="286" y2="180"/><line x1="292" y1="30" x2="292" y2="180"/><line x1="298" y1="30" x2="298" y2="180"/>
+  <line x1="304" y1="30" x2="304" y2="180"/><line x1="310" y1="30" x2="310" y2="180"/><line x1="316" y1="30" x2="316" y2="180"/>
+  <line x1="322" y1="30" x2="322" y2="180"/><line x1="328" y1="30" x2="328" y2="180"/><line x1="334" y1="30" x2="334" y2="180"/>
+  <line x1="340" y1="30" x2="340" y2="180"/><line x1="346" y1="30" x2="346" y2="180"/><line x1="352" y1="30" x2="352" y2="180"/>
+  <line x1="358" y1="30" x2="358" y2="180"/><line x1="364" y1="30" x2="364" y2="180"/><line x1="370" y1="30" x2="370" y2="180"/>
+  <line x1="376" y1="30" x2="376" y2="180"/><line x1="382" y1="30" x2="382" y2="180"/><line x1="388" y1="30" x2="388" y2="180"/>
+  <line x1="394" y1="30" x2="394" y2="180"/><line x1="400" y1="30" x2="400" y2="180"/><line x1="406" y1="30" x2="406" y2="180"/>
+  <line x1="412" y1="30" x2="412" y2="180"/><line x1="418" y1="30" x2="418" y2="180"/><line x1="424" y1="30" x2="424" y2="180"/>
+  <line x1="430" y1="30" x2="430" y2="180"/><line x1="436" y1="30" x2="436" y2="180"/><line x1="442" y1="30" x2="442" y2="180"/>
+  <line x1="448" y1="30" x2="448" y2="180"/><line x1="454" y1="30" x2="454" y2="180"/><line x1="460" y1="30" x2="460" y2="180"/>
+  <line x1="466" y1="30" x2="466" y2="180"/><line x1="472" y1="30" x2="472" y2="180"/><line x1="478" y1="30" x2="478" y2="180"/>
+  <line x1="484" y1="30" x2="484" y2="180"/><line x1="490" y1="30" x2="490" y2="180"/><line x1="496" y1="30" x2="496" y2="180"/>
+</g>
+<g stroke="#121220" stroke-width="0.5" opacity="0.6">
+  <line x1="60" y1="55" x2="500" y2="55"/><line x1="60" y1="82" x2="500" y2="82"/>
+  <line x1="60" y1="110" x2="500" y2="110"/><line x1="60" y1="138" x2="500" y2="138"/>
+  <line x1="60" y1="163" x2="500" y2="163"/>
+</g>
+<!-- Fan 1 -->
+<g transform="translate(133,105)">
+  <rect x="-45" y="-45" width="90" height="90" rx="10" fill="#0a0a12" stroke="#222232" stroke-width="1.8"/>
+  <circle cx="-36" cy="-36" r="5" fill="#0e0e18" stroke="#2a2a3a" stroke-width="1.2"/><circle cx="-36" cy="-36" r="2" fill="#060610" stroke="#3d3d4d" stroke-width="0.7"/>
+  <circle cx="36" cy="-36" r="5" fill="#0e0e18" stroke="#2a2a3a" stroke-width="1.2"/><circle cx="36" cy="-36" r="2" fill="#060610" stroke="#3d3d4d" stroke-width="0.7"/>
+  <circle cx="-36" cy="36" r="5" fill="#0e0e18" stroke="#2a2a3a" stroke-width="1.2"/><circle cx="-36" cy="36" r="2" fill="#060610" stroke="#3d3d4d" stroke-width="0.7"/>
+  <circle cx="36" cy="36" r="5" fill="#0e0e18" stroke="#2a2a3a" stroke-width="1.2"/><circle cx="36" cy="36" r="2" fill="#060610" stroke="#3d3d4d" stroke-width="0.7"/>
+  <circle r="41" fill="none" stroke="#1a1a28" stroke-width="2.2"/>
+  <g filter="url(#g2)">
+    <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="1.0s" repeatCount="indefinite"/>
+    <use href="#bl2" fill="#1e1e2c" transform="rotate(0)"/><use href="#bl2" fill="#1e1e2c" transform="rotate(45)"/>
+    <use href="#bl2" fill="#1e1e2c" transform="rotate(90)"/><use href="#bl2" fill="#1e1e2c" transform="rotate(135)"/>
+    <use href="#bl2" fill="#1e1e2c" transform="rotate(180)"/><use href="#bl2" fill="#1e1e2c" transform="rotate(225)"/>
+    <use href="#bl2" fill="#1e1e2c" transform="rotate(270)"/><use href="#bl2" fill="#1e1e2c" transform="rotate(315)"/>
+  </g>
+  <circle r="12" fill="#0a0a12" stroke="#2d2d3d" stroke-width="1.5"/>
+  <circle r="6.5" fill="#070710" stroke="#363646" stroke-width="1"/>
+  <circle r="3" fill="#181828"/>
+</g>
+<!-- Fan 2 -->
+<g transform="translate(280,105)">
+  <rect x="-45" y="-45" width="90" height="90" rx="10" fill="#0a0a12" stroke="#222232" stroke-width="1.8"/>
+  <circle cx="-36" cy="-36" r="5" fill="#0e0e18" stroke="#2a2a3a" stroke-width="1.2"/><circle cx="-36" cy="-36" r="2" fill="#060610" stroke="#3d3d4d" stroke-width="0.7"/>
+  <circle cx="36" cy="-36" r="5" fill="#0e0e18" stroke="#2a2a3a" stroke-width="1.2"/><circle cx="36" cy="-36" r="2" fill="#060610" stroke="#3d3d4d" stroke-width="0.7"/>
+  <circle cx="-36" cy="36" r="5" fill="#0e0e18" stroke="#2a2a3a" stroke-width="1.2"/><circle cx="-36" cy="36" r="2" fill="#060610" stroke="#3d3d4d" stroke-width="0.7"/>
+  <circle cx="36" cy="36" r="5" fill="#0e0e18" stroke="#2a2a3a" stroke-width="1.2"/><circle cx="36" cy="36" r="2" fill="#060610" stroke="#3d3d4d" stroke-width="0.7"/>
+  <circle r="41" fill="none" stroke="#1a1a28" stroke-width="2.2"/>
+  <g filter="url(#g2)">
+    <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="1.0s" repeatCount="indefinite"/>
+    <use href="#bl2" fill="#1e1e2c" transform="rotate(0)"/><use href="#bl2" fill="#1e1e2c" transform="rotate(45)"/>
+    <use href="#bl2" fill="#1e1e2c" transform="rotate(90)"/><use href="#bl2" fill="#1e1e2c" transform="rotate(135)"/>
+    <use href="#bl2" fill="#1e1e2c" transform="rotate(180)"/><use href="#bl2" fill="#1e1e2c" transform="rotate(225)"/>
+    <use href="#bl2" fill="#1e1e2c" transform="rotate(270)"/><use href="#bl2" fill="#1e1e2c" transform="rotate(315)"/>
+  </g>
+  <circle r="12" fill="#0a0a12" stroke="#2d2d3d" stroke-width="1.5"/>
+  <circle r="6.5" fill="#070710" stroke="#363646" stroke-width="1"/>
+  <circle r="3" fill="#181828"/>
+</g>
+<!-- Fan 3 -->
+<g transform="translate(427,105)">
+  <rect x="-45" y="-45" width="90" height="90" rx="10" fill="#0a0a12" stroke="#222232" stroke-width="1.8"/>
+  <circle cx="-36" cy="-36" r="5" fill="#0e0e18" stroke="#2a2a3a" stroke-width="1.2"/><circle cx="-36" cy="-36" r="2" fill="#060610" stroke="#3d3d4d" stroke-width="0.7"/>
+  <circle cx="36" cy="-36" r="5" fill="#0e0e18" stroke="#2a2a3a" stroke-width="1.2"/><circle cx="36" cy="-36" r="2" fill="#060610" stroke="#3d3d4d" stroke-width="0.7"/>
+  <circle cx="-36" cy="36" r="5" fill="#0e0e18" stroke="#2a2a3a" stroke-width="1.2"/><circle cx="-36" cy="36" r="2" fill="#060610" stroke="#3d3d4d" stroke-width="0.7"/>
+  <circle cx="36" cy="36" r="5" fill="#0e0e18" stroke="#2a2a3a" stroke-width="1.2"/><circle cx="36" cy="36" r="2" fill="#060610" stroke="#3d3d4d" stroke-width="0.7"/>
+  <circle r="41" fill="none" stroke="#1a1a28" stroke-width="2.2"/>
+  <g filter="url(#g2)">
+    <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="1.0s" repeatCount="indefinite"/>
+    <use href="#bl2" fill="#1e1e2c" transform="rotate(0)"/><use href="#bl2" fill="#1e1e2c" transform="rotate(45)"/>
+    <use href="#bl2" fill="#1e1e2c" transform="rotate(90)"/><use href="#bl2" fill="#1e1e2c" transform="rotate(135)"/>
+    <use href="#bl2" fill="#1e1e2c" transform="rotate(180)"/><use href="#bl2" fill="#1e1e2c" transform="rotate(225)"/>
+    <use href="#bl2" fill="#1e1e2c" transform="rotate(270)"/><use href="#bl2" fill="#1e1e2c" transform="rotate(315)"/>
+  </g>
+  <circle r="12" fill="#0a0a12" stroke="#2d2d3d" stroke-width="1.5"/>
+  <circle r="6.5" fill="#070710" stroke="#363646" stroke-width="1"/>
+  <circle r="3" fill="#181828"/>
+</g>
+<!-- Tubes for 360mm -->
+<path d="M60,162 C42,158 28,149 22,137 C16,124 20,111 16,99 C12,87 5,80 3,74" fill="none" stroke="#252535" stroke-width="9" stroke-linecap="round"/>
+<path d="M60,162 C42,158 28,149 22,137 C16,124 20,111 16,99 C12,87 5,80 3,74" fill="none" stroke="#353545" stroke-width="7" stroke-linecap="round"/>
+<path d="M60,173 C40,170 25,162 19,150 C13,138 17,124 13,113 C9,101 2,93 0,87" fill="none" stroke="#1c1c28" stroke-width="9" stroke-linecap="round"/>
+<path d="M60,173 C40,170 25,162 19,150 C13,138 17,124 13,113 C9,101 2,93 0,87" fill="none" stroke="#2c2c38" stroke-width="7" stroke-linecap="round"/>
+<!-- Pump -->
+<g transform="translate(20,163)">
+  <rect x="-22" y="-22" width="44" height="44" rx="8" fill="url(#rgb2)" opacity="0.2" filter="url(#rg2)">
+    <animate attributeName="opacity" values="0.15;0.4;0.15" dur="1.8s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="-18" y="-18" width="36" height="36" rx="7" fill="#0a0a12" stroke="url(#rgb2)" stroke-width="2.2"/>
+  <rect x="-12" y="-12" width="24" height="24" rx="4" fill="#070710" stroke="#1e1e2a" stroke-width="0.8"/>
+  <polygon points="0,-9 6,2 5.5,2 5.5,7 -5.5,7 -5.5,2 -6,2" fill="rgba(255,255,255,0.88)"/>
+  <polygon points="0,-7 -3.5,2 3.5,2" fill="#0a0a12"/>
+  <circle cx="-14" cy="-14" r="2.8" fill="url(#rgb2)"><animate attributeName="opacity" values="1;0.1;1" dur="0.85s" repeatCount="indefinite"/></circle>
+  <circle cx="14" cy="-14" r="2.8" fill="url(#rgb2)"><animate attributeName="opacity" values="0.1;1;0.1" dur="0.85s" begin="-0.21s" repeatCount="indefinite"/></circle>
+  <circle cx="-14" cy="14" r="2.8" fill="url(#rgb2)"><animate attributeName="opacity" values="1;0.1;1" dur="0.85s" begin="-0.42s" repeatCount="indefinite"/></circle>
+  <circle cx="14" cy="14" r="2.8" fill="url(#rgb2)"><animate attributeName="opacity" values="0.1;1;0.1" dur="0.85s" begin="-0.63s" repeatCount="indefinite"/></circle>
+</g>
+</svg>

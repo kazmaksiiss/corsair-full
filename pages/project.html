@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Про проект — CORSAIR</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath fill='%2300d4ff' d='M 30 170 L 60 30 L 90 70 L 140 20 L 120 110 L 170 60 L 150 140 L 120 160 L 100 180 L 30 170 Z'/%3E%3C/svg%3E">
+    <style>
+/* ══════════════════════════════════════════════
+   PROJECT PAGE STYLES
+══════════════════════════════════════════════ */
+#scrollProgress{position:fixed;top:0;left:0;height:3px;width:0%;background:linear-gradient(90deg,#00d4ff,#c77dff,#00d4ff);background-size:200% 100%;animation:sbAnim 2s linear infinite;z-index:200000;transition:width .1s;}
+@keyframes sbAnim{0%{background-position:0% 0%}100%{background-position:200% 0%}}
+#particleCanvas{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:.35;}
+.reveal{opacity:0;transform:translateY(38px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.rl{opacity:0;transform:translateX(-38px);transition:opacity .7s ease,transform .7s ease;}
+.rl.visible{opacity:1;transform:translateX(0);}
+.rr{opacity:0;transform:translateX(38px);transition:opacity .7s ease,transform .7s ease;}
+.rr.visible{opacity:1;transform:translateX(0);}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}.d5{transition-delay:.5s}
+
+/* HERO */
+.ph{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:130px 2rem 80px;text-align:center;position:relative;overflow:hidden;}
+.ph::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 100% 70% at 50% 30%,rgba(0,212,255,.055),transparent 65%),radial-gradient(ellipse 60% 50% at 80% 80%,rgba(157,78,221,.065),transparent 60%);pointer-events:none;}
+.orb{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none;animation:orbF linear infinite;opacity:0;}
+.o1{width:420px;height:420px;background:rgba(0,212,255,.055);top:5%;left:-8%;animation-duration:22s;}
+.o2{width:320px;height:320px;background:rgba(157,78,221,.07);top:45%;right:-4%;animation-duration:17s;animation-delay:-6s;}
+.o3{width:260px;height:260px;background:rgba(0,255,136,.035);bottom:8%;left:32%;animation-duration:19s;animation-delay:-9s;}
+@keyframes orbF{0%{opacity:0;transform:translateY(0) scale(1)}10%{opacity:1}50%{transform:translateY(-30px) scale(1.05)}90%{opacity:1}100%{opacity:0;transform:translateY(0) scale(1)}}
+.hbadge{display:inline-flex;align-items:center;gap:10px;background:rgba(0,212,255,.08);border:1px solid rgba(0,212,255,.25);border-radius:50px;padding:7px 20px;font-size:.72rem;letter-spacing:3px;text-transform:uppercase;color:#00d4ff;margin-bottom:2.5rem;animation:fsd .8s ease both;}
+.bdot{width:7px;height:7px;background:#00d4ff;border-radius:50%;box-shadow:0 0 10px #00d4ff;animation:pd 1.5s ease infinite;}
+@keyframes pd{0%,100%{transform:scale(1);box-shadow:0 0 10px #00d4ff}50%{transform:scale(1.6);box-shadow:0 0 22px #00d4ff,0 0 44px rgba(0,212,255,.3)}}
+.htitle{font-size:clamp(3rem,8vw,6.5rem);font-weight:900;line-height:.96;margin-bottom:1.8rem;animation:fsd .8s ease .1s both;letter-spacing:-2px;}
+.hl1{display:block;background:linear-gradient(135deg,#fff 30%,rgba(255,255,255,.5));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hl2{display:block;background:linear-gradient(135deg,#00d4ff,#0099ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:hs 5s linear infinite;}
+.hl3{display:block;background:linear-gradient(135deg,#9d4edd,#c77dff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+@keyframes hs{0%{filter:hue-rotate(0)}100%{filter:hue-rotate(30deg)}}
+.htyp{font-size:1.1rem;color:#777;min-height:1.7rem;margin-bottom:3rem;animation:fsd .8s ease .2s both;}
+.tcur{display:inline-block;width:2px;height:1.1em;background:#00d4ff;vertical-align:middle;margin-left:3px;animation:blink .8s step-end infinite;}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+.hcounters{display:flex;gap:0;justify-content:center;flex-wrap:wrap;animation:fsd .8s ease .35s both;border:1px solid rgba(255,255,255,.06);border-radius:20px;overflow:hidden;background:rgba(255,255,255,.015);backdrop-filter:blur(10px);}
+.hci{padding:1.5rem 2.2rem;text-align:center;border-right:1px solid rgba(255,255,255,.06);transition:background .3s;}
+.hci:last-child{border-right:none}
+.hci:hover{background:rgba(0,212,255,.04)}
+.hcn{font-size:2.5rem;font-weight:900;background:linear-gradient(135deg,#00d4ff,#0099ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;display:block;}
+.hcl{font-size:.68rem;text-transform:uppercase;letter-spacing:2px;color:#444;margin-top:4px;}
+.sarr{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:2px;color:#444;cursor:pointer;animation:fi 1s ease 1.2s both;}
+.sarr svg{animation:cb 1.6s ease infinite;}
+.sarr svg:nth-child(2){animation-delay:.18s}.sarr svg:nth-child(3){animation-delay:.36s}
+@keyframes cb{0%,100%{opacity:.2;transform:translateY(0)}50%{opacity:1;transform:translateY(5px)}}
+
+/* SECTIONS */
+.psec{padding:100px 0;position:relative;}
+.psec+.psec::before{content:'';position:absolute;top:0;left:5%;right:5%;height:1px;background:linear-gradient(90deg,transparent,rgba(0,212,255,.1),transparent);}
+.slabel{font-size:.7rem;letter-spacing:4px;text-transform:uppercase;color:#00d4ff;margin-bottom:.8rem;display:flex;align-items:center;gap:12px;}
+.slabel::before{content:'';width:28px;height:1px;background:linear-gradient(90deg,transparent,#00d4ff);}
+.stitle{font-size:clamp(1.8rem,4vw,3rem);font-weight:800;color:#fff;line-height:1.1;margin-bottom:.8rem;}
+.stitle em{font-style:normal;background:linear-gradient(135deg,#00d4ff,#0099ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.ssub{color:#777;font-size:.95rem;max-width:520px;line-height:1.7;}
+
+/* GENERIC CARD */
+.gcard{background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-radius:20px;padding:2rem;transition:all .35s ease;position:relative;overflow:hidden;}
+.gcard:hover{border-color:rgba(0,212,255,.28);transform:translateY(-6px);box-shadow:0 20px 60px rgba(0,212,255,.07);}
+.gcard.p:hover{border-color:rgba(157,78,221,.28);box-shadow:0 20px 60px rgba(157,78,221,.07);}
+
+/* AUTHOR */
+.awrap{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:3.5rem;}
+.acard{background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-radius:24px;padding:2.5rem;position:relative;overflow:hidden;transition:all .4s ease;}
+.acard:hover{border-color:rgba(0,212,255,.3);box-shadow:0 24px 80px rgba(0,212,255,.07);transform:translateY(-8px);}
+.acard.p:hover{border-color:rgba(157,78,221,.3);box-shadow:0 24px 80px rgba(157,78,221,.07);}
+.acard::before{content:'';position:absolute;top:-80px;right:-80px;width:200px;height:200px;background:radial-gradient(circle,rgba(0,212,255,.06),transparent 65%);pointer-events:none;}
+.acard.p::before{background:radial-gradient(circle,rgba(157,78,221,.08),transparent 65%);}
+.aav{width:80px;height:80px;border-radius:20px;border:2px solid rgba(0,212,255,.3);display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;background:rgba(0,212,255,.06);overflow:hidden;}
+.acard.p .aav{border-color:rgba(157,78,221,.3);background:rgba(157,78,221,.06);}
+.aav svg,.aav img,.aav object{width:56px;height:56px;object-fit:contain;}
+.an{font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:.3rem;}
+.ar{font-size:.73rem;text-transform:uppercase;letter-spacing:2px;color:#00d4ff;margin-bottom:1.2rem;}
+.acard.p .ar{color:#c77dff;}
+.ad{color:#777;font-size:.9rem;line-height:1.75;}
+.atags{display:flex;flex-wrap:wrap;gap:8px;margin-top:1.5rem;}
+.atag{background:rgba(0,212,255,.07);border:1px solid rgba(0,212,255,.2);border-radius:50px;padding:3px 13px;font-size:.72rem;color:#00d4ff;}
+.acard.p .atag{background:rgba(157,78,221,.07);border-color:rgba(157,78,221,.2);color:#c77dff;}
+
+/* SCHOOL */
+.sbn{margin-top:2rem;background:linear-gradient(135deg,rgba(0,212,255,.04),rgba(157,78,221,.05));border:1px solid rgba(0,212,255,.14);border-radius:20px;padding:2.5rem 3rem;display:grid;grid-template-columns:80px 1fr;gap:2rem;align-items:center;position:relative;overflow:hidden;transition:all .3s ease;}
+.sbn:hover{border-color:rgba(0,212,255,.28);box-shadow:0 16px 50px rgba(0,212,255,.05);}
+.sbn::after{content:'';position:absolute;right:-60px;top:-60px;width:220px;height:220px;background:radial-gradient(circle,rgba(0,212,255,.04),transparent 70%);pointer-events:none;}
+.sbi{width:80px;height:80px;background:rgba(0,212,255,.07);border:2px solid rgba(0,212,255,.22);border-radius:20px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.sbi img,.sbi object{width:52px;height:52px;object-fit:contain;}
+.sbinfo span{display:inline-block;background:rgba(0,212,255,.08);border:1px solid rgba(0,212,255,.2);border-radius:50px;padding:2px 12px;font-size:.7rem;color:#00d4ff;letter-spacing:2px;text-transform:uppercase;margin-bottom:.7rem;}
+.sbinfo h3{font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:.4rem;}
+.sbinfo p{color:#666;font-size:.88rem;line-height:1.65;max-width:520px;}
+
+/* ARCH */
+.arch{margin-top:3.5rem;background:rgba(0,212,255,.02);border:1px solid rgba(0,212,255,.09);border-radius:24px;padding:3rem;position:relative;overflow:hidden;}
+.arch::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 50%,rgba(0,212,255,.025),transparent);pointer-events:none;}
+.archtit{text-align:center;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:#00d4ff;margin-bottom:2.5rem;}
+.arow{display:flex;justify-content:center;gap:1rem;margin-bottom:.8rem;flex-wrap:wrap;}
+.anode{background:rgba(0,212,255,.06);border:1px solid rgba(0,212,255,.2);border-radius:10px;padding:.6rem 1.2rem;font-size:.78rem;color:#00d4ff;font-weight:600;position:relative;transition:all .3s ease;white-space:nowrap;}
+.anode:hover{background:rgba(0,212,255,.12);transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,212,255,.1);}
+.anode.main{background:linear-gradient(135deg,rgba(0,212,255,.14),rgba(0,153,255,.09));border-color:rgba(0,212,255,.38);font-size:.9rem;padding:.8rem 2rem;}
+.anode.pur{background:rgba(157,78,221,.07);border-color:rgba(157,78,221,.22);color:#c77dff;}
+.anode.pur:hover{background:rgba(157,78,221,.14);}
+.anode.dim{color:#555;border-color:rgba(255,255,255,.07);background:rgba(255,255,255,.015);}
+.anode.dim:hover{color:#777;background:rgba(255,255,255,.03);}
+.acon{display:flex;justify-content:center;margin:.15rem 0;}
+
+/* PAGES GRID */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(195px,1fr));gap:1rem;margin-top:2.5rem;}
+.pnode{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:13px;padding:1.1rem 1.4rem;display:flex;align-items:center;gap:12px;transition:all .3s ease;position:relative;overflow:hidden;}
+.pnode::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:#00d4ff;opacity:0;transition:opacity .3s;}
+.pnode.pur::before{background:#c77dff;}
+.pnode:hover{background:rgba(0,212,255,.03);border-color:rgba(0,212,255,.18);transform:translateX(4px);}
+.pnode:hover::before{opacity:1;}
+.pnum{font-size:1.1rem;font-weight:900;color:rgba(0,212,255,.28);min-width:28px;}
+.pnode.pur .pnum{color:rgba(157,78,221,.35);}
+.pname{font-size:.88rem;font-weight:500;color:#ccc;}
+.pdesc{font-size:.72rem;color:#444;margin-top:2px;}
+
+/* TECH GRID */
+.tgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:1.2rem;margin-top:3rem;}
+.tcard{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:17px;padding:1.8rem 1.2rem;text-align:center;transition:all .35s ease;cursor:default;position:relative;overflow:hidden;}
+.tcard:hover{background:rgba(0,212,255,.04);border-color:rgba(0,212,255,.28);transform:translateY(-5px) scale(1.02);box-shadow:0 12px 40px rgba(0,212,255,.07);}
+.tcard::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#00d4ff,transparent);opacity:0;transition:opacity .3s;}
+.tcard:hover::after{opacity:1;}
+.tico{width:48px;height:48px;margin:0 auto 1rem;display:flex;align-items:center;justify-content:center;}
+.tico img,.tico object{width:44px;height:44px;object-fit:contain;}
+.tname{font-size:.9rem;font-weight:600;color:#ddd;margin-bottom:.3rem;}
+.tdesc{font-size:.7rem;color:#444;}
+
+/* FEATURES */
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;margin-top:3rem;}
+.feat{display:flex;gap:1.2rem;padding:1.8rem;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:17px;transition:all .35s ease;position:relative;overflow:hidden;}
+.feat::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,transparent,#00d4ff,transparent);opacity:0;transition:opacity .3s;}
+.feat.p::before{background:linear-gradient(to bottom,transparent,#c77dff,transparent);}
+.feat:hover{background:rgba(0,212,255,.03);border-color:rgba(0,212,255,.18);transform:translateX(4px);}
+.feat.p:hover{border-color:rgba(157,78,221,.18);}
+.feat:hover::before{opacity:1;}
+.ficon{width:52px;height:52px;border-radius:14px;background:rgba(0,212,255,.08);border:1px solid rgba(0,212,255,.18);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.feat.p .ficon{background:rgba(157,78,221,.08);border-color:rgba(157,78,221,.18);}
+.ficon img,.ficon object{width:34px;height:44px;object-fit:contain;}
+.fh{font-size:.97rem;font-weight:600;color:#e0e0e0;margin-bottom:.4rem;}
+.fp{font-size:.83rem;color:#555;line-height:1.6;}
+
+/* STATS */
+.sbig{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:3rem;}
+.scard{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:20px;padding:2.2rem 1.5rem;text-align:center;position:relative;overflow:hidden;transition:all .4s ease;}
+.scard::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;opacity:0;transition:opacity .3s;}
+.scard:nth-child(1)::after{background:linear-gradient(90deg,transparent,#00d4ff,transparent);}
+.scard:nth-child(2)::after{background:linear-gradient(90deg,transparent,#c77dff,transparent);}
+.scard:nth-child(3)::after{background:linear-gradient(90deg,transparent,#00ff88,transparent);}
+.scard:nth-child(4)::after{background:linear-gradient(90deg,transparent,#ff6644,transparent);}
+.scard:hover{transform:translateY(-6px);}
+.scard:hover::after{opacity:1;}
+.scard:nth-child(1):hover{box-shadow:0 20px 50px rgba(0,212,255,.07);}
+.scard:nth-child(2):hover{box-shadow:0 20px 50px rgba(157,78,221,.07);}
+.scard:nth-child(3):hover{box-shadow:0 20px 50px rgba(0,255,136,.06);}
+.scard:nth-child(4):hover{box-shadow:0 20px 50px rgba(255,102,68,.06);}
+.siwrap{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;}
+.scard:nth-child(1) .siwrap{background:rgba(0,212,255,.1);border:1px solid rgba(0,212,255,.2);}
+.scard:nth-child(2) .siwrap{background:rgba(157,78,221,.1);border:1px solid rgba(157,78,221,.2);}
+.scard:nth-child(3) .siwrap{background:rgba(0,255,136,.07);border:1px solid rgba(0,255,136,.18);}
+.scard:nth-child(4) .siwrap{background:rgba(255,102,68,.07);border:1px solid rgba(255,102,68,.18);}
+.siwrap img,.siwrap object{width:36px;height:36px;object-fit:contain;}
+.snum{font-size:3.2rem;font-weight:900;line-height:1;margin-bottom:.4rem;}
+.scard:nth-child(1) .snum{background:linear-gradient(135deg,#00d4ff,#0099ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.scard:nth-child(2) .snum{background:linear-gradient(135deg,#9d4edd,#c77dff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.scard:nth-child(3) .snum{background:linear-gradient(135deg,#00ff88,#00d4ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.scard:nth-child(4) .snum{background:linear-gradient(135deg,#ff6644,#ffcc44);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.slbl{font-size:.7rem;color:#444;text-transform:uppercase;letter-spacing:1.5px;}
+
+/* TIMELINE */
+.tl{margin-top:3.5rem;position:relative;padding-left:2.5rem;}
+.tlline{position:absolute;left:0;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,#00d4ff,#9d4edd,transparent);}
+.tli{position:relative;padding:0 0 3.5rem 2.5rem;}
+.tli:last-child{padding-bottom:0;}
+.tldot{position:absolute;left:-2.55rem;top:4px;width:16px;height:16px;border-radius:50%;border:3px solid #0a0015;box-shadow:0 0 14px currentColor;transition:transform .3s;}
+.tli:hover .tldot{transform:scale(1.4);}
+.tli:nth-child(1) .tldot{background:#00d4ff;color:#00d4ff}
+.tli:nth-child(2) .tldot{background:#0099ff;color:#0099ff}
+.tli:nth-child(3) .tldot{background:#9d4edd;color:#9d4edd}
+.tli:nth-child(4) .tldot{background:#c77dff;color:#c77dff}
+.tli:nth-child(5) .tldot{background:#00ff88;color:#00ff88}
+.tlper{font-size:.7rem;text-transform:uppercase;letter-spacing:2.5px;margin-bottom:.5rem;}
+.tli:nth-child(1) .tlper{color:#00d4ff}
+.tli:nth-child(2) .tlper{color:#0099ff}
+.tli:nth-child(3) .tlper{color:#c77dff}
+.tli:nth-child(4) .tlper{color:#c77dff}
+.tli:nth-child(5) .tlper{color:#00ff88}
+.tltit{font-size:1.2rem;font-weight:700;color:#fff;margin-bottom:.6rem;}
+.tlbody{font-size:.88rem;color:#555;line-height:1.7;max-width:600px;}
+.tltags{display:flex;flex-wrap:wrap;gap:6px;margin-top:1rem;}
+.tltag{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:50px;padding:2px 10px;font-size:.7rem;color:#555;}
+
+/* COMPAT */
+.crow{display:grid;grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:1rem;margin-top:2.5rem;}
+.ccard{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:13px;padding:1.5rem;text-align:center;transition:all .3s;}
+.ccard:hover{border-color:rgba(0,255,136,.28);background:rgba(0,255,136,.025);transform:translateY(-4px);}
+.cico{width:40px;height:40px;margin:0 auto .8rem;display:flex;align-items:center;justify-content:center;}
+.cico svg{width:36px;height:36px;}
+.cname{font-size:.84rem;font-weight:600;color:#ccc;margin-bottom:.2rem;}
+.cstatus{font-size:.7rem;color:#00ff88;}
+.cbar{margin-top:.8rem;height:3px;background:rgba(255,255,255,.04);border-radius:50px;overflow:hidden;}
+.cfill{height:100%;background:linear-gradient(90deg,#00ff88,#00d4ff);border-radius:50px;width:0;transition:width 1.2s cubic-bezier(.16,1,.3,1);}
+
+/* ANIMATIONS */
+@keyframes fsd{from{opacity:0;transform:translateY(-22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fi{from{opacity:0}to{opacity:1}}
+
+/* RESPONSIVE */
+@media(max-width:900px){.awrap{grid-template-columns:1fr}.fgrid{grid-template-columns:1fr}.sbig{grid-template-columns:repeat(2,1fr)}.sbn{grid-template-columns:1fr;text-align:center}.sbi{margin:0 auto}}
+@media(max-width:600px){.hcounters{flex-direction:column;border:none;gap:1rem}.hci{border:1px solid rgba(255,255,255,.06);border-radius:13px}.sbig{grid-template-columns:1fr 1fr}.tgrid{grid-template-columns:repeat(2,1fr)}}
+    </style>
+</head>
+<body class="preloader-active">
+<div id="scrollProgress"></div>
+<canvas id="particleCanvas"></canvas>
+
+<!-- ═══ ANIMATED CORSAIR COOLER BACKGROUND ═══ -->
+    <div class="bg-coolers-layer" aria-hidden="true">
+      <object class="bg-cooler" data="../assets/svg/bg/aio-240.svg" type="image/svg+xml"
+        style="width:320px;top:2%;left:1%;--dur:13s;--delay:0s;--op:.09;--op2:.14;--sc1:1;--sc2:1.03;--rot:0deg;--rot2:2deg;"></object>
+      <object class="bg-cooler" data="../assets/svg/bg/aio-240.svg" type="image/svg+xml"
+        style="width:280px;top:55%;left:60%;--dur:15s;--delay:-5s;--op:.07;--op2:.12;--sc1:1;--sc2:1.04;--rot:0deg;--rot2:-3deg;"></object>
+      <object class="bg-cooler" data="../assets/svg/bg/aio-360.svg" type="image/svg+xml"
+        style="width:420px;top:28%;left:35%;--dur:18s;--delay:-3s;--op:.06;--op2:.11;--sc1:1;--sc2:1.02;--rot:0deg;--rot2:1deg;"></object>
+      <object class="bg-cooler" data="../assets/svg/bg/aio-360.svg" type="image/svg+xml"
+        style="width:360px;top:70%;left:-2%;--dur:14s;--delay:-8s;--op:.08;--op2:.13;--sc1:1;--sc2:1.03;--rot:0deg;--rot2:2deg;"></object>
+      <object class="bg-cooler" data="../assets/svg/bg/air-tower.svg" type="image/svg+xml"
+        style="width:200px;top:5%;left:70%;--dur:16s;--delay:-2s;--op:.08;--op2:.13;--sc1:1;--sc2:1.04;--rot:0deg;--rot2:-2deg;"></object>
+      <object class="bg-cooler" data="../assets/svg/bg/air-tower.svg" type="image/svg+xml"
+        style="width:220px;top:60%;left:38%;--dur:12s;--delay:-6s;--op:.07;--op2:.12;--sc1:1;--sc2:1.05;--rot:0deg;--rot2:3deg;"></object>
+      <object class="bg-cooler" data="../assets/svg/bg/air-tower.svg" type="image/svg+xml"
+        style="width:180px;top:35%;left:82%;--dur:17s;--delay:-11s;--op:.07;--op2:.11;--sc1:1;--sc2:1.03;--rot:0deg;--rot2:-1deg;"></object>
+      <object class="bg-cooler" data="../assets/svg/bg/fan-120.svg" type="image/svg+xml"
+        style="width:180px;top:15%;left:48%;--dur:11s;--delay:-4s;--op:.09;--op2:.15;--sc1:1;--sc2:1.06;--rot:0deg;--rot2:4deg;"></object>
+      <object class="bg-cooler" data="../assets/svg/bg/fan-120.svg" type="image/svg+xml"
+        style="width:160px;top:75%;left:22%;--dur:13s;--delay:-9s;--op:.08;--op2:.13;--sc1:1;--sc2:1.04;--rot:0deg;--rot2:-2deg;"></object>
+      <object class="bg-cooler" data="../assets/svg/bg/fan-120.svg" type="image/svg+xml"
+        style="width:140px;top:42%;left:8%;--dur:15s;--delay:-1s;--op:.07;--op2:.12;--sc1:1;--sc2:1.05;--rot:0deg;--rot2:3deg;"></object>
+      <object class="bg-cooler" data="../assets/svg/bg/air-dual-tower.svg" type="image/svg+xml"
+        style="width:260px;top:3%;left:26%;--dur:16s;--delay:-7s;--op:.07;--op2:.12;--sc1:1;--sc2:1.03;--rot:0deg;--rot2:2deg;"></object>
+      <object class="bg-cooler" data="../assets/svg/bg/air-dual-tower.svg" type="image/svg+xml"
+        style="width:230px;top:65%;left:75%;--dur:14s;--delay:-12s;--op:.06;--op2:.10;--sc1:1;--sc2:1.04;--rot:0deg;--rot2:-2deg;"></object>
+      <object class="bg-cooler" data="../assets/svg/bg/aio-360-titan.svg" type="image/svg+xml"
+        style="width:440px;top:42%;left:50%;--dur:20s;--delay:-4s;--op:.05;--op2:.09;--sc1:1;--sc2:1.02;--rot:0deg;--rot2:1deg;"></object>
+      <object class="bg-cooler" data="../assets/svg/bg/aio-360-titan.svg" type="image/svg+xml"
+        style="width:380px;top:82%;left:15%;--dur:17s;--delay:-16s;--op:.06;--op2:.10;--sc1:1;--sc2:1.03;--rot:0deg;--rot2:-1deg;"></object>
+    </div>
+
+<!-- PRELOADER -->
+<div id="preloader" class="preloader"><div class="preloader-content"><div class="loader-logo-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="150" height="150"><defs><style>@keyframes fillLogo{0%{fill-opacity:0}100%{fill-opacity:1}}@keyframes drawLogo{to{stroke-dashoffset:0}}.loader-logo-fill{fill:url(#lg2);fill-opacity:0;animation:fillLogo 2s ease-in-out infinite;}.loader-logo-stroke{fill:none;stroke:#00d4ff;stroke-width:3;stroke-dasharray:1000;stroke-dashoffset:1000;animation:drawLogo 2s ease-in-out infinite;}</style><linearGradient id="lg2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#00d4ff"/><stop offset="100%" style="stop-color:#0099ff"/></linearGradient></defs><path class="loader-logo-fill" d="M 30 170 L 60 30 L 90 70 L 140 20 L 120 110 L 170 60 L 150 140 L 120 160 L 100 180 L 30 170 Z"/><path class="loader-logo-stroke" d="M 30 170 L 60 30 L 90 70 L 140 20 L 120 110 L 170 60 L 150 140 L 120 160 L 100 180 L 30 170 Z"/></svg></div><h2 class="loader-text">CORSAIR</h2><div class="loader-bar"><div class="loader-progress"></div></div><p class="loader-subtext">Завантаження сторінки проекту...</p></div></div>
+
+<button id="scrollToTop" class="scroll-to-top" title="Вгору"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+    <!-- Шапка сайту -->
+    <header id="header">
+    <nav class="navbar">
+        <div class="logo">
+            <a href="../index.html" style="color: inherit; text-decoration: none; display: flex; align-items: center; gap: 10px;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="45" height="45" class="logo-svg">
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#0099ff;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <path fill="url(#logoGradient)" d="M 30 170 L 60 30 L 90 70 L 140 20 L 120 110 L 170 60 L 150 140 L 120 160 L 100 180 L 30 170 Z"/>
+                </svg>
+                <span class="logo-text">CORSAIR</span>
+            </a>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Головна</a></li>
+            <li><a href="about.html">Про нас</a></li>
+            <li><a href="products.html">Продукція</a></li>
+            <li><a href="media.html">Медіа</a></li>
+            <li><a href="contact.html">Контакти</a></li>
+            <li><a href="cart.html" class="cart-link">
+                <span class="cart-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></span>
+                <span class="cart-text">Кошик</span>
+                <span class="cart-badge" id="cartCount">0</span>
+            </a></li>
+        </ul>
+        <div class="burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+</header>
+
+<!-- ═══ HERO ═══ -->
+<section class="ph">
+  <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
+  <div class="hbadge"><div class="bdot"></div>Дипломна робота &middot; ВПУ №1 &middot; 2026</div>
+  <h1 class="htitle"><span class="hl1">Веб-сайт</span><span class="hl2">CORSAIR</span><span class="hl3">Охолодження</span></h1>
+  <p class="htyp"><span id="typingText"></span><span class="tcur"></span></p>
+  <div class="hcounters">
+    <div class="hci"><span class="hcn" data-target="12">0</span><div class="hcl">Сторінок</div></div>
+    <div class="hci"><span class="hcn" data-target="18">0</span><div class="hcl">Продуктів</div></div>
+    <div class="hci"><span class="hcn" data-target="3200" data-suffix="+">0</span><div class="hcl">Рядків коду</div></div>
+    <div class="hci"><span class="hcn" data-target="8">0</span><div class="hcl">Технологій</div></div>
+    <div class="hci"><span class="hcn" data-target="14">0</span><div class="hcl">SVG-анімацій</div></div>
+  </div>
+  <div class="sarr" onclick="document.querySelector('.psec').scrollIntoView({behavior:'smooth'})">
+    <svg viewBox="0 0 24 24" width="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+    <svg viewBox="0 0 24 24" width="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+    <svg viewBox="0 0 24 24" width="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+  </div>
+</section>
+
+<!-- ═══ АВТОР ═══ -->
+<section class="psec">
+  <div class="container">
+    <div class="slabel reveal">Команда</div>
+    <h2 class="stitle reveal d1">Хто стоїть <em>за проектом</em></h2>
+    <p class="ssub reveal d2">Автор та інструменти, що зробили цей сайт реальністю</p>
+    <div class="awrap">
+      <div class="acard rl">
+        <div class="aav">
+          <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" width="56" height="56">
+            <circle cx="28" cy="20" r="10" fill="rgba(0,212,255,.14)" stroke="#00d4ff" stroke-width="1.5"/>
+            <circle cx="28" cy="20" r="5" fill="#00d4ff" opacity=".8"/>
+            <path d="M10 46 C10 36 18 32 28 32 C38 32 46 36 46 46" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" fill="rgba(0,212,255,.07)"/>
+            <path d="M20 38L16 43 M32 38L36 43" stroke="rgba(0,212,255,.3)" stroke-width="1"/>
+            <circle cx="28" cy="20" r="2" fill="#fff" opacity=".9"><animate attributeName="opacity" values=".9;.4;.9" dur="2s" repeatCount="indefinite"/></circle>
+            <path d="M18 28L14 32 M38 28L42 32" stroke="rgba(0,212,255,.2)" stroke-width="1" stroke-dasharray="2 2"/>
+          </svg>
+        </div>
+        <div class="an">Казимірський Максим</div>
+        <div class="ar">Розробник &middot; Автор проекту</div>
+        <p class="ad">Учень ВПУ №1 міста Рівне. Самостійно розробив повноцінний комерційний веб-сайт від концепції до готового продукту. Відповідає за всю кодову базу: HTML-структуру, CSS-стилі, JavaScript-логіку, систему замовлень та адаптивний дизайн.</p>
+        <div class="atags"><span class="atag">HTML5</span><span class="atag">CSS3</span><span class="atag">JavaScript</span><span class="atag">UI/UX</span><span class="atag">EmailJS</span></div>
+      </div>
+      <div class="acard p rr">
+        <div class="aav">
+          <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" width="56" height="56">
+            <rect x="10" y="14" width="36" height="28" rx="6" fill="rgba(157,78,221,.14)" stroke="#9d4edd" stroke-width="1.5"/>
+            <circle cx="20" cy="24" r="3" fill="#9d4edd" opacity=".8"><animate attributeName="opacity" values=".8;.3;.8" dur="1.5s" repeatCount="indefinite"/></circle>
+            <circle cx="28" cy="24" r="3" fill="#c77dff" opacity=".8"><animate attributeName="opacity" values=".8;.3;.8" dur="1.5s" begin=".3s" repeatCount="indefinite"/></circle>
+            <circle cx="36" cy="24" r="3" fill="#9d4edd" opacity=".8"><animate attributeName="opacity" values=".8;.3;.8" dur="1.5s" begin=".6s" repeatCount="indefinite"/></circle>
+            <path d="M16 34 Q20 30 24 34 Q28 38 32 34 Q36 30 40 34" stroke="#c77dff" stroke-width="1.5" stroke-linecap="round" fill="none"><animate attributeName="d" values="M16 34 Q20 30 24 34 Q28 38 32 34 Q36 30 40 34;M16 34 Q20 38 24 34 Q28 30 32 34 Q36 38 40 34;M16 34 Q20 30 24 34 Q28 38 32 34 Q36 30 40 34" dur="2s" repeatCount="indefinite"/></path>
+            <path d="M24 42L24 46 M32 42L32 46 M20 46L36 46" stroke="#9d4edd" stroke-width="2" stroke-linecap="round"/>
+            <path d="M10 20L6 20 M10 28L6 28 M46 20L50 20 M46 28L50 28" stroke="rgba(157,78,221,.4)" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="an">Claude AI (Anthropic)</div>
+        <div class="ar">AI-асистент &middot; Напарник по коду</div>
+        <p class="ad">Штучний інтелект Claude від Anthropic — незамінний помічник у розробці. Допомагав генерувати код, виправляти баги, реалізовувати складні анімації, систему кошика та email-сповіщень, пропонував рішення з архітектури та структури сторінок.</p>
+        <div class="atags"><span class="atag">Генерація коду</span><span class="atag">Дебаг</span><span class="atag">Архітектура</span><span class="atag">Анімації</span><span class="atag">Алгоритми</span></div>
+      </div>
+    </div>
+    <div class="sbn reveal">
+      <div class="sbi"><img src="../assets/svg/deco-cpu.svg" alt="Заклад" width="52" height="52"></div>
+      <div class="sbinfo">
+        <span>Навчальний заклад</span>
+        <h3>ВПУ №1 міста Рівне</h3>
+        <p>Вище професійне училище №1 — заклад, де отримані знання з інформаційних технологій та веб-розробки. Проект виконаний як дипломна робота, що демонструє повний цикл розробки сучасного комерційного сайту: від планування до готового продукту.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ АРХІТЕКТУРА ═══ -->
+<section class="psec">
+  <div class="container">
+    <div class="slabel reveal">Структура</div>
+    <h2 class="stitle reveal d1">Архітектура <em>сайту</em></h2>
+    <p class="ssub reveal d2">12 взаємопов'язаних сторінок з єдиною CSS-системою та загальним JS-кошиком</p>
+    <div class="arch reveal">
+      <div class="archtit">— КАРТА СТОРІНОК —</div>
+      <div class="arow"><div class="anode main">index.html — Головна</div></div>
+      <div class="acon"><svg viewBox="0 0 10 20" width="10" height="20"><line x1="5" y1="0" x2="5" y2="20" stroke="#00d4ff" stroke-width="1.5"/></svg></div>
+      <div class="arow">
+        <div class="anode">products.html</div><div class="anode">about.html</div>
+        <div class="anode">media.html</div><div class="anode">contact.html</div><div class="anode">cart.html</div>
+      </div>
+      <div class="acon"><svg viewBox="0 0 10 16" width="10" height="16"><line x1="5" y1="0" x2="5" y2="16" stroke="rgba(0,212,255,.4)" stroke-width="1" stroke-dasharray="3 3"/></svg></div>
+      <div class="arow">
+        <div class="anode pur">product-detail.html</div><div class="anode pur">confirm-order.html</div>
+        <div class="anode pur">warranty.html</div><div class="anode pur">faq.html</div>
+        <div class="anode pur">return.html</div><div class="anode pur" style="border-color:rgba(0,255,136,.4);color:#00ff88;">project.html &#9664; ВИ ТУТ</div>
+      </div>
+      <div class="acon"><svg viewBox="0 0 10 16" width="10" height="16"><line x1="5" y1="0" x2="5" y2="16" stroke="rgba(157,78,221,.35)" stroke-width="1" stroke-dasharray="3 3"/></svg></div>
+      <div class="arow">
+        <div class="anode dim">style.css</div><div class="anode dim">script.js</div>
+        <div class="anode dim">cart.js</div><div class="anode dim">checkout.js</div>
+        <div class="anode dim">products-data.js</div>
+      </div>
+    </div>
+    <div class="pgrid">
+      <div class="pnode reveal d1"><span class="pnum">01</span><div><div class="pname">Головна</div><div class="pdesc">Hero, переваги, каталог</div></div></div>
+      <div class="pnode reveal d2"><span class="pnum">02</span><div><div class="pname">Продукція</div><div class="pdesc">Фільтрація, 18 товарів</div></div></div>
+      <div class="pnode reveal d3"><span class="pnum">03</span><div><div class="pname">Деталі товару</div><div class="pdesc">Галерея, характеристики</div></div></div>
+      <div class="pnode reveal d4"><span class="pnum">04</span><div><div class="pname">Кошик</div><div class="pdesc">Товари, кількість, сума</div></div></div>
+      <div class="pnode pur reveal d1"><span class="pnum">05</span><div><div class="pname">Оформлення</div><div class="pdesc">Форма + EmailJS</div></div></div>
+      <div class="pnode pur reveal d2"><span class="pnum">06</span><div><div class="pname">Підтвердження</div><div class="pdesc">Унікальний confirm link</div></div></div>
+      <div class="pnode pur reveal d3"><span class="pnum">07</span><div><div class="pname">Про нас</div><div class="pdesc">Компанія, місія</div></div></div>
+      <div class="pnode reveal d4"><span class="pnum">08</span><div><div class="pname">Медіа</div><div class="pdesc">Відео, фото, огляди</div></div></div>
+      <div class="pnode reveal d1"><span class="pnum">09</span><div><div class="pname">Контакти</div><div class="pdesc">Карта, форма зв'язку</div></div></div>
+      <div class="pnode reveal d2"><span class="pnum">10</span><div><div class="pname">FAQ</div><div class="pdesc">Питання та відповіді</div></div></div>
+      <div class="pnode reveal d3"><span class="pnum">11</span><div><div class="pname">Гарантія</div><div class="pdesc">Умови сервісу</div></div></div>
+      <div class="pnode pur reveal d4"><span class="pnum">12</span><div><div class="pname">Про проект</div><div class="pdesc">Ця сторінка</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ТЕХНОЛОГІЇ ═══ -->
+<section class="psec">
+  <div class="container">
+    <div class="slabel reveal">Стек</div>
+    <h2 class="stitle reveal d1">Чим <em>побудований</em> сайт</h2>
+    <p class="ssub reveal d2">Без зайвих фреймворків — чистий Vanilla JS і CSS3 з SVG-анімаціями. Швидко, легко, без залежностей.</p>
+    <div class="tgrid">
+      <div class="tcard reveal d1">
+        <div class="tico"><img src="../assets/svg/deco-cpu.svg" alt="HTML5" width="44" height="44"></div>
+        <div class="tname">HTML5</div><div class="tdesc">Семантична розмітка, SEO-структура, aria-атрибути</div>
+      </div>
+      <div class="tcard reveal d2">
+        <div class="tico">
+          <svg viewBox="0 0 44 44" width="44" height="44" fill="none">
+            <rect x="4" y="4" width="36" height="36" rx="4" fill="rgba(0,212,255,.1)" stroke="#00d4ff" stroke-width="1.5"/>
+            <text x="22" y="28" text-anchor="middle" font-size="14" font-weight="900" fill="#00d4ff" font-family="monospace">CSS</text>
+            <path d="M8 34L36 10" stroke="rgba(0,212,255,.18)" stroke-width="1"/>
+          </svg>
+        </div>
+        <div class="tname">CSS3</div><div class="tdesc">Grid, Flexbox, анімації, змінні, backdrop-filter</div>
+      </div>
+      <div class="tcard reveal d3">
+        <div class="tico">
+          <svg viewBox="0 0 44 44" width="44" height="44" fill="none">
+            <circle cx="22" cy="22" r="18" fill="rgba(255,204,0,.07)" stroke="#ffcc00" stroke-width="1.5"/>
+            <text x="22" y="27" text-anchor="middle" font-size="11" font-weight="900" fill="#ffcc00" font-family="monospace">JS</text>
+            <path d="M8 22 Q15 14 22 22 Q29 30 36 22" stroke="rgba(255,204,0,.22)" stroke-width="1" fill="none"><animate attributeName="d" values="M8 22 Q15 14 22 22 Q29 30 36 22;M8 22 Q15 30 22 22 Q29 14 36 22;M8 22 Q15 14 22 22 Q29 30 36 22" dur="3s" repeatCount="indefinite"/></path>
+          </svg>
+        </div>
+        <div class="tname">Vanilla JS</div><div class="tdesc">ES6+, без jQuery чи фреймворків</div>
+      </div>
+      <div class="tcard reveal d4">
+        <div class="tico"><img src="../assets/svg/deco-water.svg" alt="EmailJS" width="44" height="44"></div>
+        <div class="tname">EmailJS</div><div class="tdesc">Автоматичні email при кожному замовленні</div>
+      </div>
+      <div class="tcard reveal d1">
+        <div class="tico">
+          <svg viewBox="0 0 44 44" width="44" height="44" fill="none">
+            <rect x="6" y="10" width="32" height="24" rx="3" fill="rgba(0,212,255,.06)" stroke="#00d4ff" stroke-width="1.5" opacity=".7"/>
+            <path d="M12 18L20 18 M12 22L28 22 M12 26L24 26" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" opacity=".6"/>
+            <circle cx="36" cy="10" r="5" fill="rgba(0,255,136,.8)" stroke="#001" stroke-width="1"><animate attributeName="r" values="5;6;5" dur="1.5s" repeatCount="indefinite"/></circle>
+          </svg>
+        </div>
+        <div class="tname">localStorage</div><div class="tdesc">Кошик зберігається між відвідуваннями</div>
+      </div>
+      <div class="tcard reveal d2">
+        <div class="tico"><img src="../assets/svg/deco-fan.svg" alt="SVG" width="44" height="44"></div>
+        <div class="tname">SVG Animation</div><div class="tdesc">Живий анімований фон на кожній сторінці</div>
+      </div>
+      <div class="tcard reveal d3">
+        <div class="tico"><img src="../assets/svg/deco-rgb.svg" alt="RGB" width="44" height="44"></div>
+        <div class="tname">CSS Variables</div><div class="tdesc">Єдина кольорова система + RGB-ефекти</div>
+      </div>
+      <div class="tcard reveal d4">
+        <div class="tico">
+          <svg viewBox="0 0 44 44" width="44" height="44" fill="none">
+            <rect x="4" y="6" width="22" height="30" rx="3" fill="rgba(0,212,255,.05)" stroke="#00d4ff" stroke-width="1.5" opacity=".5"/>
+            <rect x="14" y="10" width="26" height="30" rx="3" fill="rgba(157,78,221,.07)" stroke="#9d4edd" stroke-width="1.5" opacity=".6"/>
+            <path d="M10 18L20 18 M10 22L20 22 M22 24L36 24 M22 28L36 28" stroke="rgba(0,212,255,.4)" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="tname">Responsive</div><div class="tdesc">Адаптивність на всіх пристроях</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ФУНКЦІЇ ═══ -->
+<section class="psec">
+  <div class="container">
+    <div class="slabel reveal">Можливості</div>
+    <h2 class="stitle reveal d1">Що вміє <em>цей сайт</em></h2>
+    <p class="ssub reveal d2">Від анімованого фону до повноцінної системи замовлень з email-підтвердженням</p>
+    <div class="fgrid">
+      <div class="feat reveal d1"><div class="ficon"><img src="../assets/svg/deco-temp.svg" alt="" width="34" height="44"></div><div><div class="fh">Кошик із localStorage</div><p class="fp">Додавання, зміна кількості, видалення. Стан зберігається між закриттям браузера.</p></div></div>
+      <div class="feat p reveal d2"><div class="ficon"><img src="../assets/svg/deco-water.svg" alt="" width="34" height="44"></div><div><div class="fh">Email-замовлення через EmailJS</div><p class="fp">При оформленні замовлення покупець отримує листа з деталями та посиланням на підтвердження.</p></div></div>
+      <div class="feat reveal d3"><div class="ficon"><img src="../assets/svg/deco-fan.svg" alt="" width="34" height="44"></div><div><div class="fh">Живий SVG-фон з кулерами</div><p class="fp">14 анімованих SVG-зображень реальної продукції Corsair плавно рухаються на фоні кожної сторінки.</p></div></div>
+      <div class="feat p reveal d4"><div class="ficon"><img src="../assets/svg/deco-rgb.svg" alt="" width="34" height="44"></div><div><div class="fh">RGB-ефекти та анімована рамка</div><p class="fp">Верхній рядок сайту — RGB-градієнт. Логотип та елементи мають glow-ефекти та пульсації.</p></div></div>
+      <div class="feat reveal d1"><div class="ficon"><img src="../assets/svg/deco-cpu.svg" alt="" width="34" height="44"></div><div><div class="fh">Система підтвердження замовлень</div><p class="fp">Кожне замовлення отримує унікальний ID. Кнопка у листі відкриває сторінку підтвердження.</p></div></div>
+      <div class="feat p reveal d2"><div class="ficon"><img src="../assets/svg/cooling-icon.svg" alt="" width="34" height="44"></div><div><div class="fh">Сповіщення з фото товару</div><p class="fp">При додаванні в кошик — повідомлення по центру екрану з реальним фото та назвою товару.</p></div></div>
+      <div class="feat reveal d3"><div class="ficon"><img src="../assets/svg/deco-temp.svg" alt="" width="34" height="44"></div><div><div class="fh">Анімований прелоадер</div><p class="fp">Стильний екран завантаження з анімованим логотипом Corsair та прогрес-баром.</p></div></div>
+      <div class="feat p reveal d4"><div class="ficon"><img src="../assets/svg/deco-fan.svg" alt="" width="34" height="44"></div><div><div class="fh">Мобільне меню-бургер</div><p class="fp">Повністю адаптивна навігація з анімованим бургер-меню для смартфонів.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ЦИФРИ ═══ -->
+<section class="psec">
+  <div class="container">
+    <div class="slabel reveal">Статистика</div>
+    <h2 class="stitle reveal d1">Проект <em>у числах</em></h2>
+    <div class="sbig">
+      <div class="scard reveal d1"><div class="siwrap"><img src="../assets/svg/deco-cpu.svg" alt="" width="36" height="36"></div><div class="snum" data-target="12">0</div><div class="slbl">HTML-сторінок</div></div>
+      <div class="scard reveal d2"><div class="siwrap"><img src="../assets/svg/deco-rgb.svg" alt="" width="36" height="36"></div><div class="snum" data-target="18">0</div><div class="slbl">Товарів у каталозі</div></div>
+      <div class="scard reveal d3"><div class="siwrap"><img src="../assets/svg/deco-water.svg" alt="" width="36" height="36"></div><div class="snum" data-target="3200" data-suffix="+">0</div><div class="slbl">Рядків CSS-коду</div></div>
+      <div class="scard reveal d4"><div class="siwrap"><img src="../assets/svg/deco-fan.svg" alt="" width="36" height="36"></div><div class="snum" data-target="14">0</div><div class="slbl">SVG-анімацій фону</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ТАЙМЛАЙН ═══ -->
+<section class="psec">
+  <div class="container">
+    <div class="slabel reveal">Розробка</div>
+    <h2 class="stitle reveal d1">Як <em>створювався</em> проект</h2>
+    <p class="ssub reveal d2">5 послідовних етапів від концепції до захисту дипломної роботи</p>
+    <div class="tl reveal">
+      <div class="tlline"></div>
+      <div class="tli">
+        <div class="tldot"></div>
+        <div class="tlper">Етап 1 — Планування</div>
+        <div class="tltit">Концепція, тема та карта сайту</div>
+        <p class="tlbody">Визначення теми дипломної роботи — веб-сайт виробника систем охолодження CORSAIR. Складання карти 12 сторінок, визначення функціоналу, підбір кольорової палітри в стилі темного sci-fi з блакитними та пурпурними акцентами.</p>
+        <div class="tltags"><span class="tltag">Планування</span><span class="tltag">Структура</span><span class="tltag">Дизайн-концепція</span></div>
+      </div>
+      <div class="tli">
+        <div class="tldot"></div>
+        <div class="tlper">Етап 2 — Верстка</div>
+        <div class="tltit">HTML-структура та CSS-система</div>
+        <p class="tlbody">Розробка базової HTML-структури всіх 12 сторінок. Налаштування глобального CSS із змінними, типографікою, хедером та футером. Підключення анімованого SVG-фону з кулерами Corsair та RGB-ефектів.</p>
+        <div class="tltags"><span class="tltag">HTML5</span><span class="tltag">CSS3</span><span class="tltag">SVG</span><span class="tltag">CSS Variables</span></div>
+      </div>
+      <div class="tli">
+        <div class="tldot"></div>
+        <div class="tlper">Етап 3 — JavaScript</div>
+        <div class="tltit">Функціонал та інтерактивність</div>
+        <p class="tlbody">Написання логіки кошика з localStorage, системи сповіщень, динамічного каталогу з фільтрацією та пошуком, прелоадера і модальних вікон. Підключення EmailJS для автоматичних листів при замовленнях.</p>
+        <div class="tltags"><span class="tltag">Vanilla JS</span><span class="tltag">localStorage</span><span class="tltag">EmailJS</span><span class="tltag">Фільтрація</span></div>
+      </div>
+      <div class="tli">
+        <div class="tldot"></div>
+        <div class="tlper">Етап 4 — Полірування</div>
+        <div class="tltit">Анімації, деталі та адаптивність</div>
+        <p class="tlbody">Додавання мікро-анімацій, hover-ефектів та скрол-анімацій. Налаштування повністю адаптивного дизайну для мобільних, планшетів та десктопів.</p>
+        <div class="tltags"><span class="tltag">CSS Animations</span><span class="tltag">Responsive</span><span class="tltag">Mobile</span><span class="tltag">Оптимізація</span></div>
+      </div>
+      <div class="tli">
+        <div class="tldot"></div>
+        <div class="tlper">Етап 5 — Фінал</div>
+        <div class="tltit">Тестування та підготовка до захисту</div>
+        <p class="tlbody">Фінальне виправлення багів, кросбраузерне тестування. Підготовка документації, презентації та сторінки "Про проект" для демонстрації на захисті.</p>
+        <div class="tltags"><span class="tltag">Тестування</span><span class="tltag">Кросбраузерність</span><span class="tltag">Документація</span><span class="tltag">Захист</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ СУМІСНІСТЬ ═══ -->
+<section class="psec">
+  <div class="container">
+    <div class="slabel reveal">Сумісність</div>
+    <h2 class="stitle reveal d1">Працює <em>скрізь</em></h2>
+    <p class="ssub reveal d2">Сайт протестовано на основних браузерах та типах пристроїв</p>
+    <div class="crow">
+      <div class="ccard reveal d1">
+        <div class="cico"><svg viewBox="0 0 36 36" width="36" height="36" fill="none"><circle cx="18" cy="18" r="16" fill="rgba(255,100,0,.09)" stroke="#ff6400" stroke-width="1.5"/><circle cx="18" cy="18" r="7" fill="#ff6400" opacity=".8"/><circle cx="18" cy="18" r="12" fill="none" stroke="#ff6400" stroke-width="2" stroke-dasharray="4 4" opacity=".4"><animateTransform attributeName="transform" type="rotate" from="0 18 18" to="360 18 18" dur="8s" repeatCount="indefinite"/></circle></svg></div>
+        <div class="cname">Chrome</div><div class="cstatus">Повна підтримка</div>
+        <div class="cbar"><div class="cfill" data-width="98"></div></div>
+      </div>
+      <div class="ccard reveal d2">
+        <div class="cico"><svg viewBox="0 0 36 36" width="36" height="36" fill="none"><circle cx="18" cy="18" r="16" fill="rgba(0,120,215,.09)" stroke="#0078d7" stroke-width="1.5"/><path d="M10 18 Q18 8 26 18 Q18 28 10 18Z" fill="#0078d7" opacity=".7"/></svg></div>
+        <div class="cname">Edge</div><div class="cstatus">Повна підтримка</div>
+        <div class="cbar"><div class="cfill" data-width="97"></div></div>
+      </div>
+      <div class="ccard reveal d3">
+        <div class="cico"><svg viewBox="0 0 36 36" width="36" height="36" fill="none"><circle cx="18" cy="18" r="16" fill="rgba(255,152,0,.09)" stroke="#ff9800" stroke-width="1.5"/><path d="M18 6 A12 12 0 0 1 30 18" stroke="#ff9800" stroke-width="2" stroke-linecap="round"/><path d="M18 6 A12 12 0 1 0 30 18" stroke="rgba(255,152,0,.3)" stroke-width="2" stroke-linecap="round"/><circle cx="18" cy="18" r="4" fill="#ff9800" opacity=".8"/></svg></div>
+        <div class="cname">Firefox</div><div class="cstatus">Повна підтримка</div>
+        <div class="cbar"><div class="cfill" data-width="95"></div></div>
+      </div>
+      <div class="ccard reveal d4">
+        <div class="cico"><svg viewBox="0 0 36 36" width="36" height="36" fill="none"><rect x="4" y="4" width="28" height="28" rx="6" fill="rgba(100,210,255,.09)" stroke="#64d2ff" stroke-width="1.5"/><circle cx="18" cy="18" r="7" fill="none" stroke="#64d2ff" stroke-width="1.5"/></svg></div>
+        <div class="cname">Safari</div><div class="cstatus">Підтримується</div>
+        <div class="cbar"><div class="cfill" data-width="90"></div></div>
+      </div>
+      <div class="ccard reveal d1">
+        <div class="cico"><svg viewBox="0 0 36 36" width="36" height="36" fill="none"><rect x="4" y="8" width="18" height="24" rx="3" fill="rgba(0,212,255,.07)" stroke="#00d4ff" stroke-width="1.5"/><rect x="14" y="4" width="18" height="24" rx="3" fill="rgba(0,212,255,.04)" stroke="rgba(0,212,255,.3)" stroke-width="1"/><path d="M8 16L18 16 M8 20L16 20" stroke="#00d4ff" stroke-width="1.2" stroke-linecap="round" opacity=".5"/></svg></div>
+        <div class="cname">Desktop</div><div class="cstatus">Оптимізовано</div>
+        <div class="cbar"><div class="cfill" data-width="100"></div></div>
+      </div>
+      <div class="ccard reveal d2">
+        <div class="cico"><svg viewBox="0 0 36 36" width="36" height="36" fill="none"><rect x="10" y="4" width="16" height="28" rx="4" fill="rgba(0,212,255,.07)" stroke="#00d4ff" stroke-width="1.5"/><circle cx="18" cy="28" r="2" fill="#00d4ff" opacity=".5"/><path d="M14 10L22 10 M14 14L22 14" stroke="#00d4ff" stroke-width="1" stroke-linecap="round" opacity=".4"/></svg></div>
+        <div class="cname">Mobile</div><div class="cstatus">Адаптивний</div>
+        <div class="cbar"><div class="cfill" data-width="96"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>CORSAIR</h4>
+                    <p>Провідний виробник систем охолодження для ПК. Інновації, якість, надійність з 2010 року.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/Corsair" target="_blank" rel="noopener noreferrer" title="Facebook" class="social-facebook">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/corsair/" target="_blank" rel="noopener noreferrer" title="Instagram" class="social-instagram">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/@CorsairGaming" target="_blank" rel="noopener noreferrer" title="YouTube" class="social-youtube">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com/Corsair" target="_blank" rel="noopener noreferrer" title="Twitter (X)" class="social-twitter">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+                        <a href="https://discord.com/invite/corsair" target="_blank" rel="noopener noreferrer" title="Discord" class="social-discord">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.reddit.com/r/Corsair/" target="_blank" rel="noopener noreferrer" title="Reddit" class="social-reddit">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Навігація</h4>
+                    <ul>
+                        <li><a href="../index.html">Головна</a></li>
+                        <li><a href="products.html">Продукція</a></li>
+                        <li><a href="about.html">Про нас</a></li>
+                        <li><a href="media.html">Медіа</a></li>
+                        <li><a href="contact.html">Контакти</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Підтримка</h4>
+                    <ul>
+                        <li><a href="warranty.html">Гарантія</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="return.html">Повернення</a></li>
+                        <li><a href="contact.html">Зв'язок</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакти</h4>
+                    <ul class="footer-contacts">
+                        <li><svg viewBox="0 0 24 24" fill="#ff6644" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> вул. Технологічна 15, Київ</li>
+                        <li><svg viewBox="0 0 24 24" fill="#44cc88" xmlns="http://www.w3.org/2000/svg"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg> +380 44 123 45 67</li>
+                        <li><svg viewBox="0 0 24 24" fill="#44aaff" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg> info@corsar.ua</li>
+                        <li><svg viewBox="0 0 24 24" fill="#ffcc44" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5z"/></svg> Пн-Пт: 9:00 - 18:00</li>
+                    </ul>
+                </div>
+            
+                <div class="footer-section footer-author-section">
+                    <h4>Про проєкт</h4>
+                    <div class="footer-author-inner">
+                        <p class="footer-made">Зроблено з <svg viewBox="0 0 24 24" width="16" height="16" style="display:inline;vertical-align:middle;fill:#e74c3c"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> в Україні</p>
+                        <p class="footer-diploma">
+                            <strong>Автор:</strong> Казимірський Максим<br>
+                            <strong>Навчальний заклад:</strong> ВПУ №1 міста Рівне<br>
+                            <strong>Проєкт:</strong> Дипломна робота
+                        </p>
+                        <a href="project.html" class="btn-project-page" style="display:block;margin-top:1rem;text-align:center;padding:0.6rem 1rem;background:linear-gradient(135deg,rgba(0,212,255,0.12),rgba(0,153,255,0.12));border:1px solid rgba(0,212,255,0.35);border-radius:8px;color:#00d4ff;text-decoration:none;font-size:0.82rem;font-weight:600;letter-spacing:0.5px;transition:all 0.3s ease;">&#9670; Ви вже на сторінці проекту</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 CORSAIR. Всі права захищені.</p>
+            </div>
+        </div>
+    </footer>
+
+<script src="../assets/js/script.js"></script>
+<script src="../assets/js/cart.js"></script>
+<script>
+/* SCROLL PROGRESS */
+window.addEventListener('scroll',()=>{
+  var el=document.getElementById('scrollProgress');
+  var max=document.body.scrollHeight-window.innerHeight;
+  el.style.width=(window.scrollY/max*100)+'%';
+});
+
+/* PARTICLE CANVAS */
+(function(){
+  var cv=document.getElementById('particleCanvas');
+  var ctx=cv.getContext('2d');
+  var W,H,pts;
+  function resize(){W=cv.width=window.innerWidth;H=cv.height=window.innerHeight;}
+  function make(){pts=Array.from({length:55},function(){return{x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4,r:Math.random()*1.4+.3,a:Math.random()*.35+.05,c:Math.random()>.5?'0,212,255':'157,78,221'};});}
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    pts.forEach(function(p){
+      p.x+=p.vx;p.y+=p.vy;
+      if(p.x<0)p.x=W;if(p.x>W)p.x=0;
+      if(p.y<0)p.y=H;if(p.y>H)p.y=0;
+      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle='rgba('+p.c+','+p.a+')';ctx.fill();
+    });
+    for(var i=0;i<pts.length;i++){for(var j=i+1;j<pts.length;j++){
+      var dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);
+      if(d<110){ctx.beginPath();ctx.strokeStyle='rgba(0,212,255,'+(0.055*(1-d/110))+')';ctx.lineWidth=.5;ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[j].x,pts[j].y);ctx.stroke();}
+    }}
+    requestAnimationFrame(draw);
+  }
+  resize();make();draw();
+  window.addEventListener('resize',function(){resize();make();});
+})();
+
+/* TYPING */
+(function(){
+  var phrases=['Повноцінний комерційний сайт виробника охолодження','Дипломна робота на 100% з Vanilla JS','12 сторінок · 18 товарів · 3200+ рядків коду','Автор: Казимірський Максим · ВПУ №1 Рівне','Розроблено з AI-асистентом Claude (Anthropic)'];
+  var pi=0,ci=0,del=false;
+  var el=document.getElementById('typingText');
+  function type(){
+    var ph=phrases[pi];
+    if(!del){el.textContent=ph.substring(0,ci+1);ci++;if(ci===ph.length){del=true;setTimeout(type,2400);return;}}
+    else{el.textContent=ph.substring(0,ci-1);ci--;if(ci===0){del=false;pi=(pi+1)%phrases.length;}}
+    setTimeout(type,del?26:54);
+  }
+  setTimeout(type,1800);
+})();
+
+/* COUNTERS */
+function animCount(el){
+  var target=parseInt(el.dataset.target),suf=el.dataset.suffix||'',dur=1500,start=performance.now();
+  function upd(now){var p=Math.min((now-start)/dur,1),e=1-Math.pow(1-p,3);el.textContent=Math.round(e*target).toLocaleString('uk-UA')+suf;if(p<1)requestAnimationFrame(upd);}
+  requestAnimationFrame(upd);
+}
+
+/* INTERSECTION OBSERVER */
+var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:.12});
+document.querySelectorAll('.reveal,.rl,.rr').forEach(function(el){obs.observe(el);});
+
+var cobs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){animCount(e.target);cobs.unobserve(e.target);}});},{threshold:.5});
+document.querySelectorAll('[data-target]').forEach(function(el){cobs.observe(el);});
+
+var bobs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.style.width=e.target.dataset.width+'%';bobs.unobserve(e.target);}});},{threshold:.3});
+document.querySelectorAll('.cfill').forEach(function(el){bobs.observe(el);});
+</script>
+</body>
+</html>

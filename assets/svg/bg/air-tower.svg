@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 360">
+<defs>
+  <linearGradient id="hs" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#202030"/><stop offset="50%" stop-color="#0e0e1c"/><stop offset="100%" stop-color="#1a1a28"/>
+  </linearGradient>
+  <linearGradient id="rgb3" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#9d4edd"><animate attributeName="stop-color" values="#9d4edd;#00d4ff;#ff6600;#9d4edd" dur="5s" repeatCount="indefinite"/></stop>
+    <stop offset="100%" stop-color="#00d4ff"><animate attributeName="stop-color" values="#00d4ff;#ff6600;#9d4edd;#00d4ff" dur="5s" repeatCount="indefinite"/></stop>
+  </linearGradient>
+  <filter id="g3"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <path id="bl3" d="M0,-44 C12,-37 17,-22 10,-10 C4,-2 0,0 -4,-2 C-10,-10 -17,-22 -12,-37Z"/>
+</defs>
+<!-- Heatsink body - tower style -->
+<!-- Base plate -->
+<rect x="80" y="290" width="140" height="20" rx="4" fill="#1a1a28" stroke="#2d2d3d" stroke-width="1.5"/>
+<rect x="85" y="292" width="130" height="16" rx="3" fill="#12121e" stroke="#252535" stroke-width="1"/>
+<!-- Heat pipes -->
+<path d="M110,290 C110,240 108,180 110,120 C112,80 116,60 120,40" fill="none" stroke="#3a2a15" stroke-width="7" stroke-linecap="round"/>
+<path d="M110,290 C110,240 108,180 110,120 C112,80 116,60 120,40" fill="none" stroke="#5a4020" stroke-width="5" stroke-linecap="round"/>
+<path d="M125,290 C124,245 122,185 124,125 C126,85 130,65 134,45" fill="none" stroke="#3a2a15" stroke-width="7" stroke-linecap="round"/>
+<path d="M125,290 C124,245 122,185 124,125 C126,85 130,65 134,45" fill="none" stroke="#5a4020" stroke-width="5" stroke-linecap="round"/>
+<path d="M140,290 C139,245 138,185 139,125 C140,85 143,65 146,45" fill="none" stroke="#3a2a15" stroke-width="7" stroke-linecap="round"/>
+<path d="M140,290 C139,245 138,185 139,125 C140,85 143,65 146,45" fill="none" stroke="#5a4020" stroke-width="5" stroke-linecap="round"/>
+<path d="M155,290 C154,245 154,185 154,125 C155,85 157,65 160,45" fill="none" stroke="#3a2a15" stroke-width="7" stroke-linecap="round"/>
+<path d="M155,290 C154,245 154,185 154,125 C155,85 157,65 160,45" fill="none" stroke="#5a4020" stroke-width="5" stroke-linecap="round"/>
+<path d="M170,290 C169,245 170,185 169,125 C170,85 172,65 175,45" fill="none" stroke="#3a2a15" stroke-width="7" stroke-linecap="round"/>
+<path d="M170,290 C169,245 170,185 169,125 C170,85 172,65 175,45" fill="none" stroke="#5a4020" stroke-width="5" stroke-linecap="round"/>
+<!-- Aluminum fins -->
+<g fill="url(#hs)" stroke="#1e1e2c" stroke-width="0.7">
+  <rect x="82" y="55" width="136" height="6" rx="1"/>
+  <rect x="82" y="65" width="136" height="6" rx="1"/>
+  <rect x="82" y="75" width="136" height="6" rx="1"/>
+  <rect x="82" y="85" width="136" height="6" rx="1"/>
+  <rect x="82" y="95" width="136" height="6" rx="1"/>
+  <rect x="82" y="105" width="136" height="6" rx="1"/>
+  <rect x="82" y="115" width="136" height="6" rx="1"/>
+  <rect x="82" y="125" width="136" height="6" rx="1"/>
+  <rect x="82" y="135" width="136" height="6" rx="1"/>
+  <rect x="82" y="145" width="136" height="6" rx="1"/>
+  <rect x="82" y="155" width="136" height="6" rx="1"/>
+  <rect x="82" y="165" width="136" height="6" rx="1"/>
+  <rect x="82" y="175" width="136" height="6" rx="1"/>
+  <rect x="82" y="185" width="136" height="6" rx="1"/>
+  <rect x="82" y="195" width="136" height="6" rx="1"/>
+  <rect x="82" y="205" width="136" height="6" rx="1"/>
+  <rect x="82" y="215" width="136" height="6" rx="1"/>
+  <rect x="82" y="225" width="136" height="6" rx="1"/>
+  <rect x="82" y="235" width="136" height="6" rx="1"/>
+  <rect x="82" y="245" width="136" height="6" rx="1"/>
+  <rect x="82" y="255" width="136" height="6" rx="1"/>
+  <rect x="82" y="265" width="136" height="6" rx="1"/>
+  <rect x="82" y="275" width="136" height="6" rx="1"/>
+</g>
+<!-- RGB strip on heatsink -->
+<rect x="82" y="53" width="136" height="3" rx="1" fill="url(#rgb3)" opacity="0.7">
+  <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+</rect>
+<!-- Front fan 120mm -->
+<g transform="translate(150,175)">
+  <rect x="-52" y="-52" width="104" height="104" rx="11" fill="#0a0a14" stroke="#1e1e2c" stroke-width="2"/>
+  <circle cx="-42" cy="-42" r="5.5" fill="#0e0e18" stroke="#282838" stroke-width="1.2"/>
+  <circle cx="-42" cy="-42" r="2" fill="#070710"/>
+  <circle cx="42" cy="-42" r="5.5" fill="#0e0e18" stroke="#282838" stroke-width="1.2"/>
+  <circle cx="42" cy="-42" r="2" fill="#070710"/>
+  <circle cx="-42" cy="42" r="5.5" fill="#0e0e18" stroke="#282838" stroke-width="1.2"/>
+  <circle cx="-42" cy="42" r="2" fill="#070710"/>
+  <circle cx="42" cy="42" r="5.5" fill="#0e0e18" stroke="#282838" stroke-width="1.2"/>
+  <circle cx="42" cy="42" r="2" fill="#070710"/>
+  <circle r="47" fill="none" stroke="#191926" stroke-width="2.5"/>
+  <g filter="url(#g3)">
+    <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="1.3s" repeatCount="indefinite"/>
+    <use href="#bl3" fill="#20202e" transform="rotate(0)"/><use href="#bl3" fill="#20202e" transform="rotate(45)"/>
+    <use href="#bl3" fill="#20202e" transform="rotate(90)"/><use href="#bl3" fill="#20202e" transform="rotate(135)"/>
+    <use href="#bl3" fill="#20202e" transform="rotate(180)"/><use href="#bl3" fill="#20202e" transform="rotate(225)"/>
+    <use href="#bl3" fill="#20202e" transform="rotate(270)"/><use href="#bl3" fill="#20202e" transform="rotate(315)"/>
+  </g>
+  <circle r="13" fill="#0a0a14" stroke="#303040" stroke-width="1.8"/>
+  <circle r="7" fill="#070710" stroke="#353545" stroke-width="1.2"/>
+  <circle r="3" fill="#181828"/>
+</g>
+</svg>

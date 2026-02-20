@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CORSAIR - Професійне охолодження ПК</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath fill='%2300d4ff' d='M 30 170 L 60 30 L 90 70 L 140 20 L 120 110 L 170 60 L 150 140 L 120 160 L 100 180 L 30 170 Z'/%3E%3C/svg%3E">
+</head>
+<body class="preloader-active">
+    <!-- ═══ ANIMATED CORSAIR COOLER BACKGROUND ═══ -->
+    <div class="bg-coolers-layer" aria-hidden="true">
+      <!-- AIO 240mm copies -->
+      <object class="bg-cooler" data="assets/svg/bg/aio-240.svg" type="image/svg+xml"
+        style="width:320px;top:2%;left:1%;--dur:13s;--delay:0s;--op:.09;--op2:.14;--sc1:1;--sc2:1.03;--rot:0deg;--rot2:2deg;"></object>
+      <object class="bg-cooler" data="assets/svg/bg/aio-240.svg" type="image/svg+xml"
+        style="width:280px;top:55%;left:60%;--dur:15s;--delay:-5s;--op:.07;--op2:.12;--sc1:1;--sc2:1.04;--rot:0deg;--rot2:-3deg;"></object>
+
+      <!-- AIO 360mm copies -->
+      <object class="bg-cooler" data="assets/svg/bg/aio-360.svg" type="image/svg+xml"
+        style="width:420px;top:28%;left:35%;--dur:18s;--delay:-3s;--op:.06;--op2:.11;--sc1:1;--sc2:1.02;--rot:0deg;--rot2:1deg;"></object>
+      <object class="bg-cooler" data="assets/svg/bg/aio-360.svg" type="image/svg+xml"
+        style="width:360px;top:70%;left:-2%;--dur:14s;--delay:-8s;--op:.08;--op2:.13;--sc1:1;--sc2:1.03;--rot:0deg;--rot2:2deg;"></object>
+
+      <!-- Air Tower copies -->
+      <object class="bg-cooler" data="assets/svg/bg/air-tower.svg" type="image/svg+xml"
+        style="width:200px;top:5%;left:70%;--dur:16s;--delay:-2s;--op:.08;--op2:.13;--sc1:1;--sc2:1.04;--rot:0deg;--rot2:-2deg;"></object>
+      <object class="bg-cooler" data="assets/svg/bg/air-tower.svg" type="image/svg+xml"
+        style="width:220px;top:60%;left:38%;--dur:12s;--delay:-6s;--op:.07;--op2:.12;--sc1:1;--sc2:1.05;--rot:0deg;--rot2:3deg;"></object>
+      <object class="bg-cooler" data="assets/svg/bg/air-tower.svg" type="image/svg+xml"
+        style="width:180px;top:35%;left:82%;--dur:17s;--delay:-11s;--op:.07;--op2:.11;--sc1:1;--sc2:1.03;--rot:0deg;--rot2:-1deg;"></object>
+
+      <!-- 120mm Fan copies -->
+      <object class="bg-cooler" data="assets/svg/bg/fan-120.svg" type="image/svg+xml"
+        style="width:180px;top:15%;left:48%;--dur:11s;--delay:-4s;--op:.09;--op2:.15;--sc1:1;--sc2:1.06;--rot:0deg;--rot2:4deg;"></object>
+      <object class="bg-cooler" data="assets/svg/bg/fan-120.svg" type="image/svg+xml"
+        style="width:160px;top:75%;left:22%;--dur:13s;--delay:-9s;--op:.08;--op2:.13;--sc1:1;--sc2:1.04;--rot:0deg;--rot2:-2deg;"></object>
+      <object class="bg-cooler" data="assets/svg/bg/fan-120.svg" type="image/svg+xml"
+        style="width:140px;top:42%;left:8%;--dur:15s;--delay:-1s;--op:.07;--op2:.12;--sc1:1;--sc2:1.05;--rot:0deg;--rot2:3deg;"></object>
+
+      <!-- Dual Tower Air Cooler -->
+      <object class="bg-cooler" data="assets/svg/bg/air-dual-tower.svg" type="image/svg+xml"
+        style="width:260px;top:3%;left:26%;--dur:16s;--delay:-7s;--op:.07;--op2:.12;--sc1:1;--sc2:1.03;--rot:0deg;--rot2:2deg;"></object>
+      <object class="bg-cooler" data="assets/svg/bg/air-dual-tower.svg" type="image/svg+xml"
+        style="width:230px;top:65%;left:75%;--dur:14s;--delay:-12s;--op:.06;--op2:.10;--sc1:1;--sc2:1.04;--rot:0deg;--rot2:-2deg;"></object>
+
+      <!-- iCUE LINK Titan 360 -->
+      <object class="bg-cooler" data="assets/svg/bg/aio-360-titan.svg" type="image/svg+xml"
+        style="width:440px;top:42%;left:50%;--dur:20s;--delay:-4s;--op:.05;--op2:.09;--sc1:1;--sc2:1.02;--rot:0deg;--rot2:1deg;"></object>
+      <object class="bg-cooler" data="assets/svg/bg/aio-360-titan.svg" type="image/svg+xml"
+        style="width:380px;top:82%;left:15%;--dur:17s;--delay:-16s;--op:.06;--op2:.10;--sc1:1;--sc2:1.03;--rot:0deg;--rot2:-1deg;"></object>
+    </div>
+
+    <!-- Екран завантаження -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <div class="loader-logo-svg">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="150" height="150">
+                    <defs>
+                        <style>
+                            @keyframes fillLogo {
+                                0% { fill-opacity: 0; }
+                                100% { fill-opacity: 1; }
+                            }
+                            .loader-logo-fill {
+                                fill: url(#loaderGradient);
+                                fill-opacity: 0;
+                                animation: fillLogo 2s ease-in-out infinite;
+                            }
+                            .loader-logo-stroke {
+                                fill: none;
+                                stroke: #00d4ff;
+                                stroke-width: 3;
+                                stroke-dasharray: 1000;
+                                stroke-dashoffset: 1000;
+                                animation: drawLogo 2s ease-in-out infinite;
+                            }
+                        </style>
+                        <linearGradient id="loaderGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#0099ff;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <path class="loader-logo-fill" d="M 30 170 L 60 30 L 90 70 L 140 20 L 120 110 L 170 60 L 150 140 L 120 160 L 100 180 L 30 170 Z"/>
+                    <path class="loader-logo-stroke" d="M 30 170 L 60 30 L 90 70 L 140 20 L 120 110 L 170 60 L 150 140 L 120 160 L 100 180 L 30 170 Z"/>
+                </svg>
+            </div>
+            <h2 class="loader-text">CORSAIR</h2>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+            <p class="loader-subtext">Завантаження систем охолодження...</p>
+        </div>
+    </div>
+
+    <!-- Кнопка "вгору" -->
+    <button id="scrollToTop" class="scroll-to-top" title="Прокрутити вгору">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </button>
+
+    <!-- Шапка сайту -->
+    <header id="header">
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html" style="color: inherit; text-decoration: none; display: flex; align-items: center; gap: 10px;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="45" height="45" class="logo-svg">
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#0099ff;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <path fill="url(#logoGradient)" d="M 30 170 L 60 30 L 90 70 L 140 20 L 120 110 L 170 60 L 150 140 L 120 160 L 100 180 L 30 170 Z"/>
+                </svg>
+                <span class="logo-text">CORSAIR</span>
+            </a>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="pages/about.html">Про нас</a></li>
+            <li><a href="pages/products.html">Продукція</a></li>
+            <li><a href="pages/media.html">Медіа</a></li>
+            <li><a href="pages/contact.html">Контакти</a></li>
+            <li><a href="pages/cart.html" class="cart-link">
+                <span class="cart-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></span>
+                <span class="cart-text">Кошик</span>
+                <span class="cart-badge" id="cartCount">0</span>
+            </a></li>
+        </ul>
+        <div class="burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+</header>
+
+    <!-- Головна секція з паралакс ефектом -->
+    <section id="home" class="hero">
+<div class="hero-content">
+            <h1 class="hero-title" data-aos="fade-up">Інноваційні рішення охолодження від CORSAIR</h1>
+            <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="100">Ми створюємо високопродуктивні системи охолодження для професійних геймерів, оверклокерів та ентузіастів ПК</p>
+            <div class="hero-buttons" data-aos="fade-up" data-aos-delay="200">
+                <a href="pages/products.html" class="btn btn-primary">
+                    <span>Переглянути продукцію</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <a href="pages/contact.html" class="btn btn-secondary">
+                    <span>Зв'язатися з нами</span>
+                </a>
+            </div>
+            <div class="hero-stats" data-aos="fade-up" data-aos-delay="300">
+                <div class="stat-mini">
+                    <div class="stat-number">14+</div>
+                    <div class="stat-label">Років досвіду</div>
+                </div>
+                <div class="stat-mini">
+                    <div class="stat-number">500K+</div>
+                    <div class="stat-label">Клієнтів</div>
+                </div>
+                <div class="stat-mini">
+                    <div class="stat-number">99%</div>
+                    <div class="stat-label">Позитивних відгуків</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-animation" data-aos="fade-left" data-aos-delay="400">
+            <div class="cooler-svg-showcase">
+                <img src="assets/svg/cooler-animated.svg" alt="Corsair H100i RGB — деталізована анімація" width="520" height="314" loading="eager"/>
+            </div>
+        </div>
+    </section>
+
+    <!-- Про компанію -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Про компанію CORSAIR</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Провідний виробник систем охолодження для ПК з 2010 року</p>
+            <div class="rgb-divider"></div>
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <p>CORSAIR - провідний виробник систем охолодження для персональних комп'ютерів з 2010 року. Ми спеціалізуємося на розробці та виробництві високоефективних рішень для охолодження процесорів, відеокарт та системних блоків.</p>
+                    <p>Наша місія - забезпечити кожного користувача ПК надійним, тихим та ефективним охолодженням, яке дозволить розкрити повний потенціал сучасного комп'ютерного обладнання.</p>
+                    <p>Продукція CORSAIR використовується провідними кібер-спортсменами, стрімерами та професіоналами у всьому світі. Ми постійно інвестуємо в дослідження та розробки, щоб пропонувати найпередовіші технології охолодження.</p>
+                </div>
+                <div class="about-stats" data-aos="fade-left">
+                    <div class="stat-item">
+                        <h3 class="counter" data-target="14">0</h3>
+                        <span class="plus">+</span>
+                        <p>Років на ринку</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 class="counter" data-target="500">0</h3>
+                        <span class="plus">K+</span>
+                        <p>Задоволених клієнтів</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 class="counter" data-target="50">0</h3>
+                        <span class="plus">+</span>
+                        <p>Моделей продукції</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 class="counter" data-target="99">0</h3>
+                        <span class="plus">%</span>
+                        <p>Позитивних відгуків</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Переваги охолодження -->
+    <section id="benefits" class="section benefits-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Чому охолодження критично важливе?</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">6 причин інвестувати в якісне охолодження</p>
+            <div class="rgb-divider" style="margin-bottom:40px;"></div>
+            <div class="benefits-grid">
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="benefit-icon" style="background:linear-gradient(135deg,rgba(255,140,0,0.15),rgba(255,200,0,0.05));border:1px solid rgba(255,140,0,0.3);"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="pg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff6600"/><stop offset="100%" stop-color="#ffcc00"/>
+    </linearGradient>
+  </defs>
+  <polygon points="36,4 12,36 28,36 26,60 52,28 36,28" fill="url(#pg1)" stroke="#ff8800" stroke-width="1.5" stroke-linejoin="round"/>
+  <ellipse cx="38" cy="14" rx="7" ry="3" fill="#ffe066" opacity="0.5" transform="rotate(-30,38,14)"/>
+</svg></div>
+                    <h3>Максимальна продуктивність</h3>
+                    <p>Ефективне охолодження запобігає термальному троттлінгу - автоматичному зниженню частоти процесора при перегріві. Це означає, що ваш ПК завжди працює на максимальній швидкості, забезпечуючи високий FPS у іграх та швидку обробку даних.</p>
+                    <div class="benefit-badge">+30% FPS</div>
+                </div>
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="benefit-icon" style="background:linear-gradient(135deg,rgba(0,150,255,0.15),rgba(0,80,200,0.05));border:1px solid rgba(0,150,255,0.3);"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00ccff"/><stop offset="100%" stop-color="#0055ff"/>
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="32" r="26" fill="none" stroke="url(#tg1)" stroke-width="3"/>
+  <circle cx="32" cy="32" r="18" fill="rgba(0,180,255,0.08)"/>
+  <line x1="32" y1="14" x2="32" y2="32" stroke="#00ccff" stroke-width="3" stroke-linecap="round"/>
+  <line x1="32" y1="32" x2="46" y2="39" stroke="#0088ff" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="32" cy="32" r="3.5" fill="#00ccff"/>
+  <!-- tick marks -->
+  <g stroke="#0066cc" stroke-width="1.5" opacity="0.5">
+    <line x1="32" y1="7" x2="32" y2="11"/><line x1="32" y1="53" x2="32" y2="57"/>
+    <line x1="7" y1="32" x2="11" y2="32"/><line x1="53" y1="32" x2="57" y2="32"/>
+  </g>
+</svg></div>
+                    <h3>Подовження терміну служби</h3>
+                    <p>Висока температура - головний ворог електроніки. Кожні 10°C зниження робочої температури подвоюють термін служби компонентів. Якісне охолодження від CORSAIR збереже ваші інвестиції в обладнання на роки.</p>
+                    <div class="benefit-badge">x2 термін служби</div>
+                </div>
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="benefit-icon" style="background:linear-gradient(135deg,rgba(0,150,255,0.15),rgba(0,80,200,0.05));border:1px solid rgba(0,150,255,0.3);">
+                        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sil1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00ccff"/><stop offset="100%" stop-color="#0055ff"/>
+    </linearGradient>
+  </defs>
+  <!-- Speaker body -->
+  <polygon points="14,22 26,22 38,12 38,52 26,42 14,42" fill="url(#sil1)" opacity="0.9"/>
+  <!-- Silent crossed-out wave -->
+  <line x1="44" y1="20" x2="56" y2="44" stroke="#00ccff" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+  <line x1="56" y1="20" x2="44" y2="44" stroke="#00ccff" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+  <!-- Small zz for quiet -->
+  <text x="41" y="18" font-family="sans-serif" font-size="9" fill="#00ddff" opacity="0.8" font-weight="bold">z</text>
+  <text x="46" y="13" font-family="sans-serif" font-size="7" fill="#00ddff" opacity="0.6" font-weight="bold">z</text>
+  <!-- Sound baseline -->
+  <line x1="14" y1="32" x2="6" y2="32" stroke="#0088ff" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+</svg>
+                    </div>
+                    <h3>Безшумна робота</h3>
+                    <p>Наші кулери оснащені гідродинамічними підшипниками та оптимізованими лопатями, що забезпечує рівень шуму всього 18-25 дБ. Це тихіше за шепіт, дозволяючи вам повністю зосередитися на грі або роботі.</p>
+                    <div class="benefit-badge">18-25 дБ</div>
+                </div>
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="benefit-icon" style="background:linear-gradient(135deg,rgba(0,220,120,0.15),rgba(0,150,80,0.05));border:1px solid rgba(0,220,120,0.3);"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="stg1" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#00ff88"/><stop offset="100%" stop-color="#00cc66"/>
+    </linearGradient>
+  </defs>
+  <!-- CPU chip -->
+  <rect x="16" y="16" width="32" height="32" rx="5" fill="rgba(0,200,100,0.12)" stroke="url(#stg1)" stroke-width="2.5"/>
+  <rect x="22" y="22" width="20" height="20" rx="3" fill="rgba(0,255,136,0.15)" stroke="#00dd77" stroke-width="1.5"/>
+  <!-- Pins -->
+  <g stroke="#00cc66" stroke-width="1.5">
+    <line x1="21" y1="12" x2="21" y2="16"/><line x1="27" y1="12" x2="27" y2="16"/>
+    <line x1="33" y1="12" x2="33" y2="16"/><line x1="39" y1="12" x2="39" y2="16"/>
+    <line x1="21" y1="48" x2="21" y2="52"/><line x1="27" y1="48" x2="27" y2="52"/>
+    <line x1="33" y1="48" x2="33" y2="52"/><line x1="39" y1="48" x2="39" y2="52"/>
+    <line x1="12" y1="21" x2="16" y2="21"/><line x1="12" y1="27" x2="16" y2="27"/>
+    <line x1="12" y1="33" x2="16" y2="33"/><line x1="12" y1="39" x2="16" y2="39"/>
+    <line x1="48" y1="21" x2="52" y2="21"/><line x1="48" y1="27" x2="52" y2="27"/>
+    <line x1="48" y1="33" x2="52" y2="33"/><line x1="48" y1="39" x2="52" y2="39"/>
+  </g>
+  <!-- Checkmark inside -->
+  <polyline points="26,32 30,36 38,28" fill="none" stroke="#00ff88" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></div>
+                    <h3>Стабільність системи</h3>
+                    <p>Перегрів призводить до помилок, зависань та аварійних перезавантажень. Системи CORSAIR підтримують оптимальну температуру 24/7, гарантуючи безперебійну роботу навіть під екстремальним навантаженням.</p>
+                    <div class="benefit-badge">24/7 стабільність</div>
+                </div>
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="benefit-icon" style="background:linear-gradient(135deg,rgba(0,255,80,0.15),rgba(0,180,50,0.05));border:1px solid rgba(0,255,80,0.3);"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="eg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00ff44"/><stop offset="100%" stop-color="#00aa22"/>
+    </linearGradient>
+  </defs>
+  <!-- Leaf shape -->
+  <path d="M32,56 C32,56 8,44 8,24 C8,14 18,8 32,8 C32,8 32,28 32,56 Z" fill="url(#eg1)" opacity="0.85"/>
+  <path d="M32,56 C32,56 56,44 56,24 C56,14 46,8 32,8 C32,8 32,28 32,56 Z" fill="rgba(0,200,60,0.45)"/>
+  <!-- Lightning bolt inside -->
+  <polygon points="35,18 27,33 32,33 29,46 37,31 32,31" fill="white" opacity="0.9"/>
+</svg></div>
+                    <h3>Економія енергії</h3>
+                    <p>Холодніші компоненти споживають менше енергії для виконання тих самих задач. Ефективне охолодження знижує рахунки за електроенергію та зменшує навантаження на блок живлення.</p>
+                    <div class="benefit-badge">-15% споживання</div>
+                </div>
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="benefit-icon" style="background:linear-gradient(135deg,rgba(255,60,0,0.15),rgba(200,30,0,0.05));border:1px solid rgba(255,60,0,0.3);"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ocg1" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff2200"/><stop offset="100%" stop-color="#ff8800"/>
+    </linearGradient>
+  </defs>
+  <!-- Speedometer arc -->
+  <path d="M10,42 A24,24 0 1,1 54,42" fill="none" stroke="#3a1500" stroke-width="7" stroke-linecap="round"/>
+  <path d="M10,42 A24,24 0 1,1 54,42" fill="none" stroke="url(#ocg1)" stroke-width="5" stroke-linecap="round" stroke-dasharray="113 37"/>
+  <!-- Needle -->
+  <line x1="32" y1="42" x2="50" y2="20" stroke="#ff4400" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="32" cy="42" r="5" fill="#ff6600" stroke="#ff2200" stroke-width="1.5"/>
+  <!-- tick marks -->
+  <g stroke="#ff6600" stroke-width="1.5" opacity="0.6">
+    <line x1="10" y1="42" x2="14" y2="40"/><line x1="18" y1="20" x2="20" y2="24"/>
+    <line x1="32" y1="8" x2="32" y2="12"/><line x1="46" y1="20" x2="44" y2="24"/>
+    <line x1="54" y1="42" x2="50" y2="40"/>
+  </g>
+</svg></div>
+                    <h3>Розгін без обмежень</h3>
+                    <p>Потужні системи охолодження CORSAIR дозволяють безпечно розганяти процесори та відеокарти, витискаючи з них до 30% додаткової продуктивності без ризику пошкодження обладнання.</p>
+                    <div class="benefit-badge">Безпечний OC</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Продукція - Посилання -->
+    <section id="products-cta" class="section cta-section" style="padding: 80px 0;">
+        <div class="container">
+            <div class="cta-content" data-aos="zoom-in">
+                <h2>Переглянути нашу продукцію</h2>
+                <p>Високоефективні системи охолодження для професіоналів та ентузіастів</p>
+                <div class="cta-buttons">
+                    <a href="pages/products.html" class="btn btn-primary btn-large">Обрати продукт</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Технології -->
+    <section id="technologies" class="section technologies-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Технології CORSAIR</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Передові рішення для максимальної ефективності</p>
+            <div class="technologies-grid">
+                <div class="tech-card" data-aos="flip-left">
+                    <div class="tech-icon"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="cop" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff9900"/><stop offset="100%" stop-color="#cc5500"/>
+    </linearGradient>
+    <linearGradient id="copc" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffcc55"/><stop offset="100%" stop-color="#cc6600"/>
+    </linearGradient>
+  </defs>
+  <!-- Copper heat pipe body -->
+  <rect x="26" y="8" width="12" height="34" rx="6" fill="url(#cop)" stroke="#aa4400" stroke-width="1"/>
+  <!-- Inner channel -->
+  <rect x="30" y="12" width="4" height="26" rx="2" fill="url(#copc)" opacity="0.7"/>
+  <!-- Heat dissipation fins -->
+  <g fill="rgba(255,140,0,0.3)" stroke="#cc6600" stroke-width="1">
+    <rect x="14" y="14" width="36" height="5" rx="2"/>
+    <rect x="14" y="22" width="36" height="5" rx="2"/>
+    <rect x="14" y="30" width="36" height="5" rx="2"/>
+  </g>
+  <!-- Base plate -->
+  <rect x="18" y="42" width="28" height="8" rx="4" fill="url(#cop)" stroke="#aa4400" stroke-width="1.2"/>
+  <!-- Heat glow -->
+  <ellipse cx="32" cy="46" rx="14" ry="3" fill="#ff6600" opacity="0.25"/>
+</svg></div>
+                    <h3>Міднінанотрубки</h3>
+                    <p>Теплові трубки з внутрішнім діаметром до 6мм забезпечують швидке відведення тепла від процесора</p>
+                </div>
+                <div class="tech-card" data-aos="flip-left" data-aos-delay="100">
+                    <div class="tech-icon"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bg1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#88aaff"/><stop offset="100%" stop-color="#2244bb"/>
+    </radialGradient>
+  </defs>
+  <!-- Outer ring -->
+  <circle cx="32" cy="32" r="26" fill="none" stroke="url(#bg1)" stroke-width="4"/>
+  <!-- Inner ring -->
+  <circle cx="32" cy="32" r="16" fill="none" stroke="#4466dd" stroke-width="3"/>
+  <!-- Ball bearings -->
+  <g fill="#aaccff">
+    <circle cx="32" cy="6" r="4"><animate attributeName="opacity" values="1;0.6;1" dur="2s" repeatCount="indefinite"/></circle>
+    <circle cx="52.7" cy="19" r="4"><animate attributeName="opacity" values="1;0.6;1" dur="2s" begin="0.3s" repeatCount="indefinite"/></circle>
+    <circle cx="52.7" cy="45" r="4"><animate attributeName="opacity" values="1;0.6;1" dur="2s" begin="0.6s" repeatCount="indefinite"/></circle>
+    <circle cx="32" cy="58" r="4"><animate attributeName="opacity" values="1;0.6;1" dur="2s" begin="0.9s" repeatCount="indefinite"/></circle>
+    <circle cx="11.3" cy="45" r="4"><animate attributeName="opacity" values="1;0.6;1" dur="2s" begin="1.2s" repeatCount="indefinite"/></circle>
+    <circle cx="11.3" cy="19" r="4"><animate attributeName="opacity" values="1;0.6;1" dur="2s" begin="1.5s" repeatCount="indefinite"/></circle>
+  </g>
+  <!-- Center axle -->
+  <circle cx="32" cy="32" r="6" fill="#2244bb" stroke="#88aaff" stroke-width="2"/>
+  <circle cx="32" cy="32" r="2.5" fill="#aaccff"/>
+</svg></div>
+                    <h3>Гідродинамічні підшипники</h3>
+                    <p>Безшумна робота та термін служби до 150,000 годин - втричі довше стандартних вентиляторів</p>
+                </div>
+                <div class="tech-card" data-aos="flip-left" data-aos-delay="200">
+                    <div class="tech-icon"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="rg1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff0066"><animate attributeName="stop-color" values="#ff0066;#ff6600;#ffff00;#00ff66;#0066ff;#aa00ff;#ff0066" dur="3s" repeatCount="indefinite"/></stop>
+      <stop offset="100%" stop-color="#0066ff"><animate attributeName="stop-color" values="#0066ff;#aa00ff;#ff0066;#ff6600;#ffff00;#00ff66;#0066ff" dur="3s" repeatCount="indefinite"/></stop>
+    </linearGradient>
+    <radialGradient id="rgc" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="white" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- RGB ring -->
+  <circle cx="32" cy="32" r="26" fill="none" stroke="url(#rg1)" stroke-width="6"/>
+  <circle cx="32" cy="32" r="20" fill="none" stroke="url(#rg1)" stroke-width="3" opacity="0.5"/>
+  <!-- LED dots -->
+  <circle cx="32" cy="8" r="4" fill="url(#rg1)"><animate attributeName="r" values="3.5;5;3.5" dur="1.5s" repeatCount="indefinite"/></circle>
+  <circle cx="54" cy="32" r="4" fill="url(#rg1)"><animate attributeName="r" values="5;3.5;5" dur="1.5s" begin="-0.5s" repeatCount="indefinite"/></circle>
+  <circle cx="32" cy="56" r="4" fill="url(#rg1)"><animate attributeName="r" values="3.5;5;3.5" dur="1.5s" begin="-1s" repeatCount="indefinite"/></circle>
+  <circle cx="10" cy="32" r="4" fill="url(#rg1)"><animate attributeName="r" values="5;3.5;5" dur="1.5s" begin="-0.25s" repeatCount="indefinite"/></circle>
+  <!-- Center glow -->
+  <circle cx="32" cy="32" r="14" fill="url(#rgc)"/>
+</svg></div>
+                    <h3>ARGB підсвітка</h3>
+                    <p>16.8 мільйонів кольорів та синхронізація з материнською платою через ASUS Aura, MSI Mystic Light</p>
+                </div>
+                <div class="tech-card" data-aos="flip-left" data-aos-delay="300">
+                    <div class="tech-icon"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="pwmg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00ddff"/><stop offset="100%" stop-color="#0066cc"/>
+    </linearGradient>
+  </defs>
+  <!-- Fan blade shape (rotating) -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate" from="0 32 32" to="360 32 32" dur="1.2s" repeatCount="indefinite"/>
+    <path d="M32,32 C32,32 20,12 28,6 C36,0 40,12 32,32Z" fill="url(#pwmg)" opacity="0.9"/>
+    <path d="M32,32 C32,32 52,24 56,32 C60,40 48,44 32,32Z" fill="url(#pwmg)" opacity="0.9"/>
+    <path d="M32,32 C32,32 44,52 36,58 C28,64 24,52 32,32Z" fill="url(#pwmg)" opacity="0.9"/>
+    <path d="M32,32 C32,32 12,40 8,32 C4,24 16,20 32,32Z" fill="url(#pwmg)" opacity="0.9"/>
+  </g>
+  <!-- Hub -->
+  <circle cx="32" cy="32" r="8" fill="#0044aa" stroke="#00ddff" stroke-width="2"/>
+  <circle cx="32" cy="32" r="3.5" fill="#00aadd"/>
+  <!-- Outer ring -->
+  <circle cx="32" cy="32" r="28" fill="none" stroke="#0066cc" stroke-width="1.5" opacity="0.4"/>
+</svg></div>
+                    <h3>PWM контроль</h3>
+                    <p>Автоматичне регулювання швидкості вентиляторів від 0 до 2000 RPM залежно від навантаження</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Відгуки -->
+    <section id="testimonials" class="section testimonials-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Відгуки клієнтів</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Що кажуть наші покупці</p>
+            <div class="testimonials-slider">
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="testimonial-rating"><svg viewBox="0 0 24 24" fill="#FFD700" stroke="#FFA500" stroke-width="0.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#FFD700" stroke="#FFA500" stroke-width="0.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#FFD700" stroke="#FFA500" stroke-width="0.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#FFD700" stroke="#FFA500" stroke-width="0.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#FFD700" stroke="#FFA500" stroke-width="0.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+                    <p class="testimonial-text">"CORSAIR Arctic Pro 360 - найкращий кулер, який я коли-небудь використовував! Температура процесора впала на 20°C, а шуму майже не чути. Розгін до 5.2 GHz став реальністю!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+  <defs><radialGradient id="avbg1" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#4400cc"/><stop offset="100%" stop-color="#220066"/></radialGradient></defs>
+  <circle cx="24" cy="24" r="24" fill="url(#avbg1)"/>
+  <!-- Monitor -->
+  <rect x="10" y="14" width="28" height="18" rx="3" fill="none" stroke="#00ddff" stroke-width="1.8"/>
+  <rect x="12" y="16" width="24" height="14" rx="2" fill="rgba(0,150,255,0.2)"/>
+  <!-- Game controller on screen -->
+  <rect x="15" y="19" width="18" height="8" rx="4" fill="#00aaff" opacity="0.7"/>
+  <line x1="18" y1="23" x2="21" y2="23" stroke="white" stroke-width="1.2"/>
+  <line x1="19.5" y1="21.5" x2="19.5" y2="24.5" stroke="white" stroke-width="1.2"/>
+  <circle cx="26.5" cy="22.5" r="1" fill="white"/>
+  <circle cx="29" cy="24" r="1" fill="white"/>
+  <!-- Stand -->
+  <line x1="24" y1="32" x2="24" y2="37" stroke="#00ddff" stroke-width="2"/>
+  <line x1="18" y1="37" x2="30" y2="37" stroke="#00ddff" stroke-width="2" stroke-linecap="round"/>
+</svg></div>
+                        <div class="author-info">
+                            <h4>Олексій К.</h4>
+                            <p>Професійний геймер</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-rating"><svg viewBox="0 0 24 24" fill="#FFD700" stroke="#FFA500" stroke-width="0.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#FFD700" stroke="#FFA500" stroke-width="0.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#FFD700" stroke="#FFA500" stroke-width="0.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#FFD700" stroke="#FFA500" stroke-width="0.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#FFD700" stroke="#FFA500" stroke-width="0.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+                    <p class="testimonial-text">"Встановив Frost Tower X для робочої станції - результат перевершив очікування. Тихий, потужний, легко встановлюється. Гарантія 3 роки - приємний бонус!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+  <defs><radialGradient id="avbg2" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#cc0066"/><stop offset="100%" stop-color="#660033"/></radialGradient></defs>
+  <circle cx="24" cy="24" r="24" fill="url(#avbg2)"/>
+  <!-- Palette -->
+  <ellipse cx="25" cy="26" rx="13" ry="11" fill="none" stroke="#ffaadd" stroke-width="1.8"/>
+  <ellipse cx="25" cy="26" rx="8" ry="6" fill="rgba(255,100,180,0.2)"/>
+  <!-- Color dots on palette -->
+  <circle cx="16" cy="22" r="3" fill="#ff4499"/>
+  <circle cx="21" cy="18" r="3" fill="#ffcc00"/>
+  <circle cx="27" cy="17" r="3" fill="#00ccff"/>
+  <circle cx="32" cy="21" r="3" fill="#44ff88"/>
+  <circle cx="33" cy="28" r="3" fill="#aa44ff"/>
+  <!-- Brush -->
+  <line x1="16" y1="35" x2="28" y2="22" stroke="#ffddee" stroke-width="2" stroke-linecap="round"/>
+  <ellipse cx="14.5" cy="36.5" rx="3" ry="2" fill="#ffaadd" transform="rotate(-45,14.5,36.5)"/>
+</svg></div>
+                        <div class="author-info">
+                            <h4>Марія П.</h4>
+                            <p>3D дизайнер</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-rating"><svg viewBox="0 0 24 24" fill="#FFD700" stroke="#FFA500" stroke-width="0.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#FFD700" stroke="#FFA500" stroke-width="0.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#FFD700" stroke="#FFA500" stroke-width="0.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#FFD700" stroke="#FFA500" stroke-width="0.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#FFD700" stroke="#FFA500" stroke-width="0.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+                    <p class="testimonial-text">"RGB підсвітка на Hydro Elite 280 виглядає просто космічно! Продуктивність топ, синхронізація з материнкою працює ідеально. Рекомендую всім!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+  <defs><radialGradient id="avbg3" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#006600"/><stop offset="100%" stop-color="#003300"/></radialGradient></defs>
+  <circle cx="24" cy="24" r="24" fill="url(#avbg3)"/>
+  <!-- Gamepad -->
+  <rect x="9" y="17" width="30" height="16" rx="8" fill="none" stroke="#44ff44" stroke-width="1.8"/>
+  <rect x="11" y="19" width="26" height="12" rx="6" fill="rgba(0,200,0,0.15)"/>
+  <!-- D-pad left -->
+  <line x1="15" y1="25" x2="20" y2="25" stroke="#44ff44" stroke-width="1.5"/>
+  <line x1="17.5" y1="22.5" x2="17.5" y2="27.5" stroke="#44ff44" stroke-width="1.5"/>
+  <!-- Buttons right -->
+  <circle cx="30" cy="22.5" r="2" fill="#ff4444"/>
+  <circle cx="33.5" cy="25.5" r="2" fill="#44ff44"/>
+  <circle cx="30" cy="28.5" r="2" fill="#4488ff"/>
+  <circle cx="26.5" cy="25.5" r="2" fill="#ffcc00"/>
+  <!-- Record dot (live) -->
+  <circle cx="24" cy="13" r="3.5" fill="#ff0000"/>
+  <circle cx="24" cy="13" r="2" fill="#ff6666"><animate attributeName="r" values="2;3.2;2" dur="1s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0.5;1" dur="1s" repeatCount="indefinite"/></circle>
+</svg></div>
+                        <div class="author-info">
+                            <h4>Дмитро В.</h4>
+                            <p>Стрімер</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ швидкий -->
+    <section id="faq-quick" class="section faq-quick-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Часті питання</h2>
+            <div class="faq-grid">
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="0">
+                    <div class="faq-question">
+                        <h3>Як обрати систему охолодження?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Вибір залежить від TDP процесора, розміру корпусу та вашого бюджету. Для офісних ПК підійдуть компактні повітряні кулери, для ігрових - башточні кулери або рідинне охолодження 240-280мм, для розгону - системи 360мм.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="faq-question">
+                        <h3>Яка гарантія на продукцію?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Рідинне охолодження - 4-5 років, повітряне - 2-3 роки, аксесуари - 1 рік. Гарантія покриває всі виробничі дефекти та несправності.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="faq-question">
+                        <h3>Чи потрібна заміна термопасти?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Рекомендуємо міняти термопасту кожні 1-2 роки. У комплекті з кожним кулером йде якісна термопаста, якої вистачить на кілька застосувань.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="faq-question">
+                        <h3>Наскільки складне встановлення?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>До кожного кулера додається детальна інструкція з фото. Встановлення займає 15-30 хвилин. Відео-інструкції доступні на нашому YouTube каналі.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section-cta" data-aos="fade-up">
+                <a href="pages/faq.html" class="btn btn-secondary">Переглянути всі питання</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA секція -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-content" data-aos="zoom-in">
+                <h2>Готові покращити охолодження вашого ПК?</h2>
+                <p>Замовте консультацію наших експертів або оберіть продукт прямо зараз</p>
+                <div class="cta-buttons">
+                    <a href="pages/products.html" class="btn btn-primary btn-large">Обрати продукт</a>
+                    <a href="pages/contact.html" class="btn btn-secondary btn-large">Консультація</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>CORSAIR</h4>
+                    <p>Провідний виробник систем охолодження для ПК. Інновації, якість, надійність з 2010 року.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/Corsair" target="_blank" rel="noopener noreferrer" title="Facebook" class="social-facebook">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/corsair/" target="_blank" rel="noopener noreferrer" title="Instagram" class="social-instagram">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/@CorsairGaming" target="_blank" rel="noopener noreferrer" title="YouTube" class="social-youtube">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com/Corsair" target="_blank" rel="noopener noreferrer" title="Twitter (X)" class="social-twitter">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+                        <a href="https://discord.com/invite/corsair" target="_blank" rel="noopener noreferrer" title="Discord" class="social-discord">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.reddit.com/r/Corsair/" target="_blank" rel="noopener noreferrer" title="Reddit" class="social-reddit">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Навігація</h4>
+                    <ul>
+                        <li><a href="index.html">Головна</a></li>
+                        <li><a href="pages/products.html">Продукція</a></li>
+                        <li><a href="pages/about.html">Про нас</a></li>
+                        <li><a href="pages/media.html">Медіа</a></li>
+                        <li><a href="pages/contact.html">Контакти</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Підтримка</h4>
+                    <ul>
+                        <li><a href="pages/warranty.html">Гарантія</a></li>
+                        <li><a href="pages/faq.html">FAQ</a></li>
+                        <li><a href="pages/return.html">Повернення</a></li>
+                        <li><a href="pages/contact.html">Зв'язок</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакти</h4>
+                    <ul class="footer-contacts">
+                        <li><svg viewBox="0 0 24 24" fill="#ff6644" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> вул. Технологічна 15, Київ</li>
+                        <li><svg viewBox="0 0 24 24" fill="#44cc88" xmlns="http://www.w3.org/2000/svg"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg> +380 44 123 45 67</li>
+                        <li><svg viewBox="0 0 24 24" fill="#44aaff" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg> info@corsar.ua</li>
+                        <li><svg viewBox="0 0 24 24" fill="#ffcc44" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5z"/></svg> Пн-Пт: 9:00 - 18:00</li>
+                    </ul>
+                </div>
+            
+                <div class="footer-section footer-author-section">
+                    <h4>Про проєкт</h4>
+                    <div class="footer-author-inner">
+                        <p class="footer-made">Зроблено з <svg viewBox="0 0 24 24" width="16" height="16" style="display:inline;vertical-align:middle;fill:#e74c3c"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> в Україні</p>
+                        <p class="footer-diploma">
+                            <strong>Автор:</strong> Казимірський Максим<br>
+                            <strong>Навчальний заклад:</strong> ВПУ №1 міста Рівне<br>
+                            <strong>Проєкт:</strong> Дипломна робота
+                        </p>
+                        <a href="pages/project.html" class="btn-project-page" style="display:block;margin-top:1rem;text-align:center;padding:0.6rem 1rem;background:linear-gradient(135deg,rgba(0,212,255,0.12),rgba(0,153,255,0.12));border:1px solid rgba(0,212,255,0.35);border-radius:8px;color:#00d4ff;text-decoration:none;font-size:0.82rem;font-weight:600;letter-spacing:0.5px;transition:all 0.3s ease;">✦ Детальніше про проект →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 CORSAIR. Всі права захищені.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальне вікно -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init('MIot4KpfOpWeL38hF');
+        })();
+    </script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/cart.js"></script>
+</body>
+</html>

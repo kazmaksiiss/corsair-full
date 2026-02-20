@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220">
+<defs>
+  <linearGradient id="rgb4" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#ff0088"><animate attributeName="stop-color" values="#ff0088;#ff6600;#00ff88;#0088ff;#ff0088" dur="4s" repeatCount="indefinite"/></stop>
+    <stop offset="100%" stop-color="#0088ff"><animate attributeName="stop-color" values="#0088ff;#ff0088;#ff6600;#00ff88;#0088ff" dur="4s" repeatCount="indefinite"/></stop>
+  </linearGradient>
+  <filter id="g4"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="rg4"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <path id="bl4" d="M0,-48 C13,-40 19,-24 10,-10 C5,-2 0,0 -5,-2 C-10,-10 -19,-24 -13,-40Z"/>
+</defs>
+<g transform="translate(110,110)">
+  <!-- Outer frame RGB glow -->
+  <rect x="-100" y="-100" width="200" height="200" rx="18" fill="url(#rgb4)" opacity="0.12" filter="url(#rg4)">
+    <animate attributeName="opacity" values="0.08;0.2;0.08" dur="2.5s" repeatCount="indefinite"/>
+  </rect>
+  <!-- Frame -->
+  <rect x="-96" y="-96" width="192" height="192" rx="16" fill="#0b0b16" stroke="url(#rgb4)" stroke-width="2"/>
+  <rect x="-91" y="-91" width="182" height="182" rx="13" fill="none" stroke="#1a1a28" stroke-width="1"/>
+  <!-- Corner screws -->
+  <circle cx="-80" cy="-80" r="7.5" fill="#0e0e1c" stroke="#252535" stroke-width="1.5"/>
+  <circle cx="-80" cy="-80" r="3" fill="#080810" stroke="#3a3a4a" stroke-width="1"/>
+  <line x1="-82.5" y1="-80" x2="-77.5" y2="-80" stroke="#3d3d4d" stroke-width="0.8"/>
+  <line x1="-80" y1="-82.5" x2="-80" y2="-77.5" stroke="#3d3d4d" stroke-width="0.8"/>
+  <circle cx="80" cy="-80" r="7.5" fill="#0e0e1c" stroke="#252535" stroke-width="1.5"/>
+  <circle cx="80" cy="-80" r="3" fill="#080810" stroke="#3a3a4a" stroke-width="1"/>
+  <line x1="77.5" y1="-80" x2="82.5" y2="-80" stroke="#3d3d4d" stroke-width="0.8"/>
+  <line x1="80" y1="-82.5" x2="80" y2="-77.5" stroke="#3d3d4d" stroke-width="0.8"/>
+  <circle cx="-80" cy="80" r="7.5" fill="#0e0e1c" stroke="#252535" stroke-width="1.5"/>
+  <circle cx="-80" cy="80" r="3" fill="#080810" stroke="#3a3a4a" stroke-width="1"/>
+  <line x1="-82.5" y1="80" x2="-77.5" y2="80" stroke="#3d3d4d" stroke-width="0.8"/>
+  <line x1="-80" y1="77.5" x2="-80" y2="82.5" stroke="#3d3d4d" stroke-width="0.8"/>
+  <circle cx="80" cy="80" r="7.5" fill="#0e0e1c" stroke="#252535" stroke-width="1.5"/>
+  <circle cx="80" cy="80" r="3" fill="#080810" stroke="#3a3a4a" stroke-width="1"/>
+  <line x1="77.5" y1="80" x2="82.5" y2="80" stroke="#3d3d4d" stroke-width="0.8"/>
+  <line x1="80" y1="77.5" x2="80" y2="82.5" stroke="#3d3d4d" stroke-width="0.8"/>
+  <!-- Fan ring -->
+  <circle r="84" fill="none" stroke="#1e1e2c" stroke-width="3"/>
+  <circle r="79" fill="none" stroke="#141420" stroke-width="1"/>
+  <!-- RGB ring -->
+  <circle r="84" fill="none" stroke="url(#rgb4)" stroke-width="2" stroke-dasharray="24,12" opacity="0.5">
+    <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <!-- Rotating blades -->
+  <g filter="url(#g4)">
+    <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="1.25s" repeatCount="indefinite"/>
+    <use href="#bl4" fill="#1d1d2c" transform="rotate(0)"/>
+    <use href="#bl4" fill="#1d1d2c" transform="rotate(45)"/>
+    <use href="#bl4" fill="#1d1d2c" transform="rotate(90)"/>
+    <use href="#bl4" fill="#1d1d2c" transform="rotate(135)"/>
+    <use href="#bl4" fill="#1d1d2c" transform="rotate(180)"/>
+    <use href="#bl4" fill="#1d1d2c" transform="rotate(225)"/>
+    <use href="#bl4" fill="#1d1d2c" transform="rotate(270)"/>
+    <use href="#bl4" fill="#1d1d2c" transform="rotate(315)"/>
+  </g>
+  <!-- Hub -->
+  <circle r="18" fill="#0b0b16" stroke="url(#rgb4)" stroke-width="2"/>
+  <circle r="12" fill="#080810" stroke="#2a2a3a" stroke-width="1.5"/>
+  <circle r="5" fill="#121220" stroke="#353545" stroke-width="1"/>
+  <circle r="2.2" fill="#1e1e30"/>
+</g>
+</svg>

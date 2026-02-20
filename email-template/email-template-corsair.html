@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Підтвердження замовлення CORSAIR</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: Arial, sans-serif;">
+    <table style="background-color: #f4f4f4;" border="0" width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+            <td style="padding: 20px 10px;" align="center">
+                <table style="background-color: #ffffff; border-radius: 15px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.15);" border="0" width="650" cellspacing="0" cellpadding="0">
+                    <!-- Header -->
+                    <tr>
+                        <td style="background: linear-gradient(135deg, #0a0e27 0%, #1a1d2e 100%); padding: 50px 30px; text-align: center;">
+                            <div style="margin-bottom: 20px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="80" height="80">
+                                    <defs>
+                                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1" />
+                                            <stop offset="100%" style="stop-color:#0099ff;stop-opacity:1" />
+                                        </linearGradient>
+                                    </defs>
+                                    <path fill="url(#logoGradient)" d="M 30 170 L 60 30 L 90 70 L 140 20 L 120 110 L 170 60 L 150 140 L 120 160 L 100 180 L 30 170 Z" style="filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.5));"/>
+                                </svg>
+                            </div>
+                            <h1 style="margin: 0 0 10px 0; color: #ffffff; font-size: 42px; letter-spacing: 3px; text-shadow: 0 2px 10px rgba(0,0,0,0.2);">CORSAIR</h1>
+                            <p style="margin: 0; color: #00d4ff; font-size: 18px; font-weight: 500;">Професійне охолодження ПК</p>
+                        </td>
+                    </tr>
+                    <!-- Content -->
+                    <tr>
+                        <td style="padding: 40px 35px;">
+                            <!-- Greeting -->
+                            <table style="background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(0, 153, 255, 0.1)); padding: 25px; border-radius: 12px; border-left: 5px solid #00d4ff; margin-bottom: 30px;" border="0" width="100%" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td>
+                                        <h2 style="margin: 0 0 15px 0; color: #00d4ff; font-size: 28px;">Вітаємо, {{customer_name}}! 👋</h2>
+                                        <p style="margin: 0; color: #333333; font-size: 17px; line-height: 1.6;">Дякуємо за ваше замовлення в CORSAIR! Ми отримали вашу заявку і готові розпочати її обробку.</p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <!-- Order ID -->
+                            <table style="margin: 25px 0;" border="0" width="100%" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td align="center">
+                                        <p style="margin: 0 0 5px 0; color: #666666; font-size: 14px;">Номер вашого замовлення:</p>
+                                        <h3 style="margin: 0; color: #00d4ff; font-size: 28px;">{{order_id}}</h3>
+                                    </td>
+                                </tr>
+                            </table>
+                            <!-- Products Section -->
+                            <table style="margin: 30px 0;" border="0" width="100%" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td>
+                                        <h2 style="margin: 0 0 20px 0; color: #00d4ff; font-size: 24px; padding-bottom: 10px; border-bottom: 2px solid #00d4ff;">📦 Ваше замовлення</h2>
+                                        {{{products_html}}}
+                                    </td>
+                                </tr>
+                            </table>
+                            <!-- Total Price -->
+                            <table style="background: linear-gradient(135deg, #00d4ff, #0099ff); border-radius: 12px; margin: 30px 0;" border="0" width="100%" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td style="padding: 25px;" align="center">
+                                        <h3 style="margin: 0 0 10px 0; color: #ffffff; font-size: 20px; opacity: 0.9;">Загальна сума замовлення:</h3>
+                                        <p style="margin: 0; color: #ffffff; font-size: 36px; font-weight: bold;">{{total_price}}</p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <!-- Customer Info -->
+                            <table style="background-color: #f9f9f9; padding: 20px; border-radius: 12px; margin: 20px 0;" border="0" width="100%" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td>
+                                        <h3 style="margin: 0 0 15px 0; color: #00d4ff; font-size: 20px;">📋 Контактні дані</h3>
+                                        <p style="margin: 8px 0; color: #333333;"><strong style="color: #00d4ff;">Email:</strong> {{customer_email}}</p>
+                                        <p style="margin: 8px 0; color: #333333;"><strong style="color: #00d4ff;">Телефон:</strong> {{customer_phone}}</p>
+                                        <p style="margin: 8px 0; color: #333333;"><strong style="color: #00d4ff;">Дата:</strong> {{order_date}}</p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <!-- Customer Message -->
+                            <table style="background-color: #f9f9f9; padding: 20px; border-radius: 12px; margin: 20px 0;" border="0" width="100%" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td>
+                                        <h3 style="margin: 0 0 15px 0; color: #00d4ff; font-size: 20px;">💬 Ваше повідомлення</h3>
+                                        <p style="margin: 0; color: #666666; font-style: italic;">{{customer_message}}</p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <!-- Confirm Button -->
+                            <table style="margin: 40px 0;" border="0" width="100%" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td align="center">
+                                        <a style="display: inline-block; background: linear-gradient(135deg, #00d4ff, #0099ff); color: #ffffff; padding: 18px 50px; text-decoration: none; border-radius: 50px; font-size: 20px; font-weight: bold; box-shadow: 0 8px 25px rgba(0, 212, 255, 0.4);" href="{{confirm_url}}">✓ ПІДТВЕРДИТИ ЗАМОВЛЕННЯ</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <!-- Next Steps -->
+                            <table style="background-color: #fff8e1; border: 2px solid #ffd54f; border-radius: 12px; padding: 25px; margin: 30px 0;" border="0" width="100%" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td>
+                                        <h3 style="margin: 0 0 15px 0; color: #f57f17; font-size: 22px;"><svg viewBox="0 0 24 24" fill="#f57f17" width="20" height="20" style="display:inline;vertical-align:middle;margin-right:6px"><path d="M7 2v11h3v9l7-12h-4l4-8z"/></svg> Що далі?</h3>
+                                        <ol style="margin: 0; padding-left: 25px; color: #333333;">
+                                            <li style="margin: 10px 0; line-height: 1.7;"><strong>Підтвердіть замовлення</strong> - натисніть кнопку вище для підтвердження</li>
+                                            <li style="margin: 10px 0; line-height: 1.7;"><strong>Очікуйте дзвінка</strong> - наш менеджер зв'яжеться з вами протягом 1-2 годин</li>
+                                            <li style="margin: 10px 0; line-height: 1.7;"><strong>Узгодження доставки</strong> - ми обговоримо зручний час і адресу</li>
+                                            <li style="margin: 10px 0; line-height: 1.7;"><strong>Отримання товару</strong> - доставка протягом 1-3 робочих днів</li>
+                                        </ol>
+                                    </td>
+                                </tr>
+                            </table>
+                            <hr style="border: none; border-top: 2px solid #e0e0e0; margin: 35px 0;">
+                            <!-- Additional Info -->
+                            <table border="0" width="100%" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td align="center">
+                                        <p style="margin: 15px 0; color: #666666; line-height: 1.8;"><strong style="color: #00d4ff;">Гарантія якості:</strong><br>Всі продукти CORSAIR мають гарантію від 2 до 5 років</p>
+                                        <p style="margin: 15px 0; color: #666666; line-height: 1.8;"><strong style="color: #00d4ff;">Безкоштовна доставка:</strong><br>При замовленні від 3000 грн</p>
+                                        <p style="margin: 15px 0; color: #666666; line-height: 1.8;"><strong style="color: #00d4ff;">Оплата:</strong><br>Готівка при отриманні або безготівковий розрахунок</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- Footer -->
+                    <tr>
+                        <td style="background: linear-gradient(135deg, #0a0e27, #1a1d2e); color: #ffffff; padding: 40px 30px;">
+                            <table border="0" width="100%" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td align="center">
+                                        <div style="margin-bottom: 20px;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="50" height="50">
+                                                <path fill="#00d4ff" d="M 30 170 L 60 30 L 90 70 L 140 20 L 120 110 L 170 60 L 150 140 L 120 160 L 100 180 L 30 170 Z"/>
+                                            </svg>
+                                        </div>
+                                        <h3 style="margin: 0 0 20px 0; font-size: 24px; color: #00d4ff;">З повагою, команда CORSAIR</h3>
+                                    </td>
+                                </tr>
+                            </table>
+                            <!-- Footer Contacts -->
+                            <table style="margin: 25px 0;" border="0" width="100%" cellspacing="0" cellpadding="15">
+                                <tr>
+                                    <td style="background-color: rgba(0, 212, 255, 0.2); border-radius: 10px;" align="center">
+                                        <strong style="color: #00d4ff; display: block; margin-bottom: 5px;">📞 Телефон</strong>
+                                        <span style="color: #ffffff;">+380 44 123 45 67</span>
+                                    </td>
+                                    <td width="20">&nbsp;</td>
+                                    <td style="background-color: rgba(0, 212, 255, 0.2); border-radius: 10px;" align="center">
+                                        <strong style="color: #00d4ff; display: block; margin-bottom: 5px;">📧 Email</strong>
+                                        <span style="color: #ffffff;">info@corsair.ua</span>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table style="margin-top: 20px;" border="0" width="100%" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td align="center">
+                                        <p style="margin: 0; color: #00d4ff; font-size: 14px;"><svg viewBox="0 0 24 24" fill="#00d4ff" width="14" height="14" style="display:inline;vertical-align:middle;margin-right:4px"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> вул. Технологічна 15, м. Київ, Україна</p>
+                                        <p style="margin: 10px 0 0 0; color: #00d4ff; font-size: 16px;"><strong>Графік роботи:</strong> Понеділок - П'ятниця, 9:00 - 18:00</p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(0, 212, 255, 0.3);" border="0" width="100%" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td align="center">
+                                        <p style="margin: 5px 0; color: #b8b8b8; font-size: 12px;">&copy; 2026 CORSAIR. Всі права захищені.</p>
+                                        <p style="margin: 5px 0; color: #b8b8b8; font-size: 12px;">Цей email було надіслано на {{customer_email}}</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

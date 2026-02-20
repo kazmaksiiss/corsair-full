@@ -1,0 +1,35 @@
+<!-- CORSAIR Logo SVG -->
+<svg id="corsair-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="60" height="60">
+    <defs>
+        <style>
+            @keyframes draw {
+                from {
+                    stroke-dashoffset: 1000;
+                }
+                to {
+                    stroke-dashoffset: 0;
+                }
+            }
+            
+            .logo-path {
+                fill: none;
+                stroke: #00d4ff;
+                stroke-width: 3;
+                stroke-dasharray: 1000;
+                stroke-dashoffset: 1000;
+                animation: draw 3s ease-in-out infinite;
+            }
+            
+            .logo-fill {
+                fill: #00d4ff;
+                opacity: 0.1;
+            }
+        </style>
+    </defs>
+    
+    <!-- Основна форма вітрильника (заливка) -->
+    <path class="logo-fill" d="M 30 170 L 60 30 L 90 70 L 140 20 L 120 110 L 170 60 L 150 140 L 120 160 L 100 180 L 30 170 Z"/>
+    
+    <!-- Анімований контур -->
+    <path class="logo-path" d="M 30 170 L 60 30 L 90 70 L 140 20 L 120 110 L 170 60 L 150 140 L 120 160 L 100 180 L 30 170 Z"/>
+</svg>
