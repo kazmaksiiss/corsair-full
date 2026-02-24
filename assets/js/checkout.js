@@ -165,7 +165,7 @@ function processCheckoutOrder(data) {
     
     // Генеруємо унікальний ID замовлення
     var orderId = 'ORD-' + Date.now();
-    var confirmUrl = window.location.origin + '/corsair-full/pages/confirm-order.html?order=' + orderId;
+    var confirmUrl = window.location.origin + '/site.atestaciyna/confirm-order.html?order=' + orderId;
     
     var orderData = {
         customerName: data.name,
